@@ -17,6 +17,9 @@ export default {
         'DarkGray': "#6B6B6B",
         'Black': "#000000",
         'YellowDark': "#F7D334",
+      },
+      fontFamily: {
+        'Roboto': ['Roboto'],
       }
     },
   },
