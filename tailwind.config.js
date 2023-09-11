@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+
+  
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+ 
   theme: {
     extend: {
-      colors: {
+      colors: { 
         'LightBlue': "#40D7E1",
         'darkBlue': "#01BEC9",
         'Green': "#034B47",
