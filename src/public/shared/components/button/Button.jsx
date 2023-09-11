@@ -1,8 +1,9 @@
 import React from "react";
 import style from "./button.module.scss";
+import "./button_tailwind.css";
  
 export const Button = () => {
-  console.log(style.default);
+
   return (
     <div class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
       <div class="max-w-sm mx-auto p-8 bg-white rounded-xl shadow-md space-y-2 sm:flex sm:items-center sm:py-4 sm:space-y-0 sm:space-x-6 ">
@@ -17,7 +18,7 @@ export const Button = () => {
           </div>
           
           <button class="btn-purple">visit now</button>
-          <button className=`${style.default}`>link</button>
+          <button className={`${style.default} btn-purple`}>link</button>
         </div>
       </div>
     </div>
