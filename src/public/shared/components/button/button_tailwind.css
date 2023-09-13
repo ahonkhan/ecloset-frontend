@@ -1,15 +1,44 @@
     /* group utilities */
+    @tailwind base;
+
+    .btn{
+        @apply  px-4 
+        py-1
+    border border-purple-200
+    border  rounded-full
+    font-semibold
+    rounded-full 
+    focus:ring-offset-2
+    hover:border-transparent
+    focus:outline-none
+    }
     .btn-purple{
-        @apply px-4 
-             py-1
-         border border-purple-200 
-         rounded-full 
+        @apply 
          text-sm text-purple-600
-          font-semibold
+         
            hover:text-white hover:bg-purple-600 
-           hover:border-transparent
-        focus:outline-none 
+           
         focus:ring-2 focus:ring-purple-600 
-        focus:ring-offset-2
+        
         
         }
+
+        .btn-green{
+@apply  
+text-sm text-green-600
+font-semibold
+hover:text-white hover:bg-green-600 
+
+focus:ring-2 focus:ring-green-600 
+
+
+        }
+
+@layer base{
+    h1{
+        @apply text-2xl;
+    }
+}
+   
+
+     
