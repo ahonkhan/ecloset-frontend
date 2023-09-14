@@ -1,3 +1,9 @@
+.HeaderPaddingDesktop {
+    @apply pl-[75px] pr-4
+}
+.HeaderPaddingMobile{
+    @apply px-4
+}
 .pulse {
     animation: pulse 750ms ease-in-out infinite;
     // transform: scale(1.5);
