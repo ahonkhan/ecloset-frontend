@@ -37,7 +37,7 @@ export const ButtonRightArrow = () => {
 
 export const ButtonJoinNow = () => {
   return (
-    <button class=" overflow-hidden px-2 py-3  w-[282px]  md:w-[300px] lg:w-[350] xl:w-[450px] 2xl:w-[500px]  h-[66px] flex items-center justify-center   bg-LightBlue   text-white  text-sm font-medium   hover:bg-white hover:text-Black">
+    <button class=" overflow-hidden rounded-md px-2 py-3  w-[282px]  md:w-[300px] lg:w-[350] xl:w-[450px] 2xl:w-[500px]  h-[66px] flex items-center justify-center   bg-LightBlue   text-white  text-sm font-medium   hover:bg-white hover:text-Black">
       Join Now
     </button>
   );
@@ -119,6 +119,80 @@ export const ButtonXXLightBlue = ({ children }) => {
   return (
   <button class="overflow-hidden bg-LightBlue  text-white w-[64px] h-[43] md:w-[70px] lg:w-[80px] xl:w-[100px] 2xl:w-[120px] py-4   hover:bg-white hover:text-Black">
     {children}
+    </button>
+  );
+};
+
+export const ButtonNextPageLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden bg-LightBlue  text-white w-[134px] h-[40px] md:w-[150px] lg:w-[180px] xl:w-[200px] 2xl:w-[220px]   hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+export const ButtonPageNumberLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden bg-LightBlue  text-white w-[64px] h-[64px] md:w-[80px] lg:w-[100px] xl:w-[120px] 2xl:w-[150px]   hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+
+export const ButtonReactWhite = ({ children }) => {
+  return (
+  <button class="overflow-hidden bg-white  text-red-600 w-[64px] h-[43] md:w-[70px] lg:w-[80px] xl:w-[100px] 2xl:w-[120px] py-4   hover:bg-red-600 hover:text-white">
+    {children}
+    </button>
+  );
+};
+
+
+export const ButtonSubmitLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden rounded-md bg-LightBlue  text-white w-[74px] h-[64px] md:w-[120px] lg:w-[130px] xl:w-[150px] 2xl:w-[180px]   hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+export const ButtonApplyCouponLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden rounded-md bg-LightBlue  text-white w-[74px] h-[64px] md:w-[120px] lg:w-[130px] xl:w-[150px] 2xl:w-[180px]   hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+export const ButtonUpdateCartLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden rounded-md bg-LightBlue  text-white w-[74px] h-[64px] md:w-[120px] lg:w-[130px] xl:w-[150px] 2xl:w-[180px]   hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+export const ButtonProceedToCheckoutLightBlue = ({ children }) => {
+  return (
+  <button class="overflow-hidden rounded-md bg-LightBlue  text-white w-[130px] h-[64px] md:w-[130px] lg:w-[150px] xl:w-[220px] 2xl:w-[290px]    hover:bg-white hover:text-Black">
+    {children}
+    </button>
+  );
+};
+
+export const ButtonSendMessage = () => {
+  return (
+    <button class=" overflow-hidden rounded-md  px-2   md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[400px]  h-[66px] flex items-center justify-center   bg-LightBlue   text-white  text-sm font-medium   hover:bg-white hover:text-Black">
+      Send Message
+    </button>
+  );
+};
+
+export const ButtonPostComment = () => {
+  return (
+    <button class=" overflow-hidden rounded-md  px-2   md:w-[150px] lg:w-[200px] xl:w-[250px] 2xl:w-[300px]  h-[66px] flex items-center justify-center   bg-LightBlue   text-white  text-sm font-medium   hover:bg-white hover:text-Black">
+      Post Comment
     </button>
   );
 };

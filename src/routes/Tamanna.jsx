@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, ButtonCart, LearnMore } from '../public/shared/components/button/RevisionButton'
-import { ButtonJoinNow, ButtonLargeLearnMore, ButtonLargeLightBlue, ButtonLeftArrow, ButtonLifeStyle, ButtonMediumLightBlue, ButtonRightArrow, ButtonShopNow, ButtonSmallLightBlue, ButtonSubscribe, ButtonTagsShirt, ButtonTrendyTops, ButtonXLLightBlue, ButtonXXLightBlue } from '../public/shared/components/button/Button'
+import { ButtonApplyCouponLightBlue, ButtonJoinNow, ButtonLargeLearnMore, ButtonLargeLightBlue, ButtonLeftArrow, ButtonLifeStyle, ButtonMediumLightBlue, ButtonNextPageLightBlue, ButtonPageNumberLightBlue, ButtonPostComment, ButtonProceedToCheckoutLightBlue, ButtonReactWhite, ButtonRightArrow, ButtonSendMessage, ButtonShopNow, ButtonSmallLightBlue, ButtonSubmitLightBlue, ButtonSubscribe, ButtonTagsShirt, ButtonTrendyTops, ButtonUpdateCartLightBlue, ButtonXLLightBlue, ButtonXXLightBlue } from '../public/shared/components/button/Button'
 
 const Tamanna = () => {
     return (
@@ -44,6 +44,23 @@ const Tamanna = () => {
 <br /><br />
 <ButtonXXLightBlue>XXL</ButtonXXLightBlue>
 <br /><br />
+<ButtonNextPageLightBlue>Next Page</ButtonNextPageLightBlue>
+<br /><br />
+<ButtonPageNumberLightBlue>1</ButtonPageNumberLightBlue>
+<br /><br />
+<ButtonReactWhite>Love</ButtonReactWhite>
+<br />
+<ButtonSubmitLightBlue>Submit Review</ButtonSubmitLightBlue>
+<br /><br />
+<ButtonApplyCouponLightBlue>Apply Coupon</ButtonApplyCouponLightBlue>
+<br /><br />
+<ButtonUpdateCartLightBlue>Update Cart</ButtonUpdateCartLightBlue>
+<br /><br />
+<ButtonProceedToCheckoutLightBlue>Proceed To Checkout</ButtonProceedToCheckoutLightBlue>
+<br /><br />
+<ButtonSendMessage></ButtonSendMessage>
+<br />
+<ButtonPostComment></ButtonPostComment>
 
 {/* <Button></Button>
 <LearnMore></LearnMore>
