@@ -8,15 +8,8 @@ import { ImCart } from 'react-icons/im';
 import { GetSharedContext } from '../../context/Context';
 // import 
 export const DesktopMenu = () => {
-    const menu = [
-        { name: 'Donates', path: '' },
-        { name: 'Stores', path: '' },
-        { name: 'Events', path: '' },
-        { name: 'Contact us', path: '' },
 
-    ]
     const context = useContext(GetSharedContext);
-    console.log(context.desktopSidebarStatus);
     return (
         <menu className={`flex ${style.HeaderPaddingDesktop} justify-between bg-GreenLight py-2 bg-opacity-30`}>
             <div className="flex items-center gap-4">
@@ -25,7 +18,7 @@ export const DesktopMenu = () => {
                     <span className='font-Poppins text-[15px] text-gray-500'>All Categories</span>
                 </button>
                 {
-                    menu.map(item =>
+                    context.menu?.map(item =>
                         <Link to={item.path} className='px-4 text-gray-700 rounded-3xl duration-300 hover:text-Green hover:bg-opacity-40 hover:bg-GreenLight py-2  font-Poppins text-[15px] tracking-wide font-medium'>{item.name}</Link>
                     )
                 }

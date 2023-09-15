@@ -5,11 +5,14 @@ import { DesktopSidebar } from '../Sidebar/Sidebar'
 
 const DesktopHeader = () => {
     return (
-        <header className='bg-white hidden lg:block'>
+        <>
             <Navbar />
-            <DesktopMenu />
-            <DesktopSidebar />
-        </header>
+            <header className='bg-white hidden lg:block'>
+
+                <DesktopMenu />
+                <DesktopSidebar />
+            </header>
+        </>
     )
 }
 

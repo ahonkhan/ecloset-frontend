@@ -1,14 +1,31 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './navbar.module.scss';
 import LogoGreen from '../../assets/LogoGreen';
 import { MdMenu, MdOutlineSupportAgent, MdSearch } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineUser, AiOutlineWhatsApp } from 'react-icons/ai';
+import { GetSharedContext } from '../../context/Context';
 // import 
 export const Navbar = () => {
     const [IsLoading, setIsLoading] = useState(false);
+
+    const [isFixed, setIsFixed] = useState(false);
+
+    var lastScrollPosition = document.documentElement.scrollTop;
+
+    window.addEventListener('scroll', () => {
+
+        if (window.scrollY > 200) {
+            setIsFixed(true);
+        } else {
+            setIsFixed(false);
+
+        }
+
+
+    })
     return (
-        <nav className={`${style.HeaderPaddingDesktop} flex items-center bg-white gap-12 py-4`}>
+        <nav className={`${style.HeaderPaddingDesktop} ${isFixed ? 'py-2.5' : 'py-4'} duration-200 bg-white hidden lg:flex sticky top-0 items-center z-[70] gap-12 `}>
             <Link to={''} className="logo">
                 <LogoGreen />
             </Link>
@@ -41,9 +58,10 @@ export const Navbar = () => {
 
 
 export const MobileNavbar = () => {
+    const context = useContext(GetSharedContext);
     return (
         <nav className={`${style.HeaderPaddingMobile} flex bg-white items-center justify-between gap-12 py-2`}>
-            <button>
+            <button onClick={() => context.setMobileSidebarStatus(true)}>
                 <MdMenu className='text-2xl text-DarkGray' />
             </button>
             <Link to={''} className="logo">
