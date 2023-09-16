@@ -35,7 +35,7 @@ export const DesktopSidebar = () => {
                                     <div className="h-full overflow-y-auto" style={{ 'scrollbarWidth': 'thin' }}>
                                         {
                                             category?.SubCategories?.map(subCategory =>
-                                                <div className="border-b border-gray-200 pb-3">
+                                                <div className="border-b border-gray-200 py-3">
                                                     <Link to={''} className="text-base uppercase font-WorkSans font-medium text-gray-800">{subCategory.name}</Link>
                                                     <ul className="whitespace-nowrap tracking-wide mt-1 duration-300 font-medium  text-DarkGray font-WorkSans text-sm">
                                                         {
