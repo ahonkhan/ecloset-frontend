@@ -11,9 +11,10 @@
 
 
 // }
-.swiper-pagination{
+.swiper-pagination {
     @apply pb-4
 }
+
 .swiper-pagination-bullet-active {
     background-color: rgb(0, 167, 70) !important;
 }
@@ -21,4 +22,15 @@
 
 .shadow-1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.swiper-button-prev {
+    --tw-text-opacity: 1;
+    color: rgb(3 75 71 / var(--tw-text-opacity)) !important;
+
+}
+
+.swiper-button-next {
+    --tw-text-opacity: 1;
+    color: rgb(3 75 71 / var(--tw-text-opacity)) !important;
 }
