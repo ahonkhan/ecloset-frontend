@@ -44,6 +44,7 @@ export default {
         'Literata': ['Literata'],
         'WorkSans': ['Work Sans'],
         'Poppins': ['Poppins'],
+        'Ubuntu': ['Ubuntu'],
 
       }
     },

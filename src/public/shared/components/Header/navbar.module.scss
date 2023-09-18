@@ -1,0 +1,50 @@
+.HeaderPaddingDesktop {
+    @apply pl-[75px] pr-4
+}
+
+.HeaderPaddingMobile {
+    @apply px-4
+}
+
+.pulse {
+    animation: pulse 750ms ease-in-out infinite;
+    // transform: scale(1.5);
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.fixedNav {
+    @apply py-2
+}
+
+// .fixedNav {
+//     animation: slideUp 700ms ease-in-out forwards;
+// }
+
+// @keyframes slideUp {
+//     0% {
+//         transform: translateY(-100%);
+//     }
+
+//     // 50% {
+//     //     transform: scale(1.1);
+//     // }
+
+//     100% {
+//         transform: translateY(0);
+//     }
+// }

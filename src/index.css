@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-  
+.site-container {
+    @apply px-4
+}
