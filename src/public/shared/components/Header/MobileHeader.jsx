@@ -5,11 +5,14 @@ import { MobileSidebar } from '../Sidebar/Sidebar'
 
 const MobileHeader = () => {
     return (
-        <header className='lg:hidden'>
+        <>
             <MobileNavbar />
-            <MobileMenu />
-            <MobileSidebar />
-        </header>
+
+            <header className='lg:hidden'>
+                <MobileMenu />
+                <MobileSidebar />
+            </header>
+        </>
     )
 }
 
