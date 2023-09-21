@@ -132,8 +132,14 @@ export const SharedContext = ({ children }) => {
         { name: 'Contact us', path: '' },
 
     ]
+    const productTags = [
+        'Shirts', 'Electronics', 'Desktop', 'Tops', 'T-shirts', 'Fahions'
+    ]
+    const productSizes = [
+        'S', 'M', 'L', 'XL', 'XXL'
+    ]
 
     return (
-        <GetSharedContext.Provider value={{ mobileSidebarStatus, setMobileSidebarStatus, desktopSidebarStatus, SetDesktopSidebarStatus, Categories, menu }}>{children}</GetSharedContext.Provider>
+        <GetSharedContext.Provider value={{ mobileSidebarStatus, productSizes, productTags, setMobileSidebarStatus, desktopSidebarStatus, SetDesktopSidebarStatus, Categories, menu }}>{children}</GetSharedContext.Provider>
     )
 }

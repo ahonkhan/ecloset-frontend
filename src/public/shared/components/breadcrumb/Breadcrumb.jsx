@@ -8,7 +8,7 @@ const Breadcrumb = () => {
     console.log(filteredPath)
     return (
 
-        <nav className="flex bg-gray-50 text-gray-700 border border-gray-200 py-3 px-5" aria-label="Breadcrumb">
+        <nav className="flex w-full bg-gray-50 text-gray-700 py-3 px-5" aria-label="Breadcrumb">
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 <li className="inline-flex items-center">
                     <Link to={'/'} className="text-sm text-gray-700 hover:text-gray-900 inline-flex items-center dark:text-gray-400 ">

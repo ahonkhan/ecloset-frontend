@@ -7,7 +7,6 @@ const MobileHeader = () => {
     return (
         <>
             <MobileNavbar />
-
             <header className='lg:hidden'>
                 <MobileMenu />
                 <MobileSidebar />
