@@ -34,7 +34,7 @@ const AddReviewForm = () => {
                 </div>
 
                 <div className="form-item">
-                    <button className='px-4 py-2.5 rounded duration-150 hover:opacity-80 shadow-1 text-white bg-LightBlue w-fit'>Submit Review</button>
+                    <button className='px-4 py-2.5 rounded duration-150 hover:opacity-80 shadow-2 text-white bg-LightBlue w-fit'>Submit Review</button>
                 </div>
             </form>
 

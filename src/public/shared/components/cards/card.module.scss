@@ -1,9 +1,9 @@
 .ProductCardStyle {
     transition: all 300ms;
     background-color: white;
-    &:hover {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    }
+    // &:hover {
+    //     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    // }
 
     .productImgWrapper {
         overflow: hidden;

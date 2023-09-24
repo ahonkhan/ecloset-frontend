@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react'
 import DescriptionTab from './DescriptionTab';
-import ReviewsTab from './ReviewsTab';
+import ReviewsTab from '../ProductReviewTab/ReviewsTab';
 
 const ProductDetailsTab = () => {
     const [activeTab, setActiveTab] = useState(0);

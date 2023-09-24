@@ -11,15 +11,15 @@ export const FilterHeading = ({ children }) => {
 
 export const RatingStar = ({ count }) => {
     return (
-        <ul className='flex items-center gap-0.5'>
+        <ul className='flex items-center'>
             {[...new Array(count)].map(item =>
                 <li >
-                    <MdStar className='text-YellowDark text-xl' />
+                    <MdStar className='text-YellowDark text-lg' />
                 </li>)
             }
             {[...new Array(5 - count)].map(item =>
                 <li >
-                    <MdStarOutline className='text-gray-400 text-xl' />
+                    <MdStarOutline className='text-gray-400 text-lg' />
                 </li>)
             }
         </ul>
