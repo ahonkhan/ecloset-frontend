@@ -5,7 +5,7 @@ import { ImStarFull, ImStarHalf } from 'react-icons/im'
 import { AiOutlineEye, AiOutlineHeart } from 'react-icons/ai'
 export const ProductCard = () => {
     return (
-        <div className={`product-card xs:max-w-[100%]  ${style.ProductCardStyle} rounded-[10px] pb-2.5`}>
+        <Link to={'/products/a4tech-gaming-keyboard'} className={`product-card xs:max-w-[100%]  ${style.ProductCardStyle} rounded-[10px] pb-2.5`}>
             <div className={`product-img min-h-[300px] cursor-pointer relative ${style.productImgWrapper}`}>
                 <img src={img} alt="" className='rounded-[10px] w-full' />
                 <div className={`${style.OverLay2} py-3 px-4 w-full h-full flex justify-between flex-col  absolute top-0  rounded-[10px]`}>
@@ -41,6 +41,6 @@ export const ProductCard = () => {
                 <p className='text-xs text-DarkGray'>Free Shipping</p>
 
             </div>
-        </div>
+        </Link>
     )
 }

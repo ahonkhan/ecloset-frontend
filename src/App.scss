@@ -15,6 +15,12 @@
     @apply pb-4
 }
 
+.productDetailsSlider {
+    .swiper-pagination {
+        padding: 0 !important;
+    }
+}
+
 .swiper-pagination-bullet-active {
     background-color: rgb(0, 167, 70) !important;
 }
@@ -22,6 +28,10 @@
 
 .shadow-1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.shadow-2 {
+    box-shadow: 0px 25px 35px 0px rgba(42, 167, 255, 0.15);
 }
 
 .swiper-button-prev {
