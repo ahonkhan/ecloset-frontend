@@ -19,24 +19,24 @@ const ProductDetailsTab = () => {
                 </div>
             </div>
 
-            <AnimatePresence>
-                {activeTab === 0 && (
-                    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                        <DescriptionTab />
 
-                    </motion.div>
-                )}
+            {activeTab === 0 && (
+                <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                    <DescriptionTab />
 
-            </AnimatePresence>
-            <AnimatePresence>
-                {activeTab === 1 && (
-                    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                        <ReviewsTab />
+                </motion.div>
+            )}
 
-                    </motion.div>
-                )}
 
-            </AnimatePresence>
+
+            {activeTab === 1 && (
+                <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                    <ReviewsTab />
+
+                </motion.div>
+            )}
+
+
 
         </section >
 
