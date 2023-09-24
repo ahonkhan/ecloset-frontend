@@ -12,7 +12,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const ImageWrapper = () => {
     return (
-        <div className="image-wrapper md:w-[350px] w-full shrink-0">
+        <div className="image-wrapper md:w-[350px] xl:w-[450px] w-full shrink-0">
             <div className="display-img shrink-0">
                 <img src={display_img} className='rounded-md w-full' alt="" />
             </div>

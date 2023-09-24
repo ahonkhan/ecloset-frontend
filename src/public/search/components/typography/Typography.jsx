@@ -1,4 +1,5 @@
 import React from 'react'
+import { MdStar, MdStarOutline } from 'react-icons/md'
 
 export const FilterHeading = ({ children }) => {
     return (
@@ -8,3 +9,27 @@ export const FilterHeading = ({ children }) => {
     )
 }
 
+export const RatingStar = ({ count }) => {
+    return (
+        <ul className='flex items-center gap-0.5'>
+            {[...new Array(count)].map(item =>
+                <li >
+                    <MdStar className='text-YellowDark text-xl' />
+                </li>)
+            }
+            {[...new Array(5 - count)].map(item =>
+                <li >
+                    <MdStarOutline className='text-gray-400 text-xl' />
+                </li>)
+            }
+        </ul>
+    )
+}
+
+export const RatingProgressBar = ({ progress }) => {
+    return (
+        <div className='w-full h-1.5 rounded bg-gray-200'>
+            <span className={`line block h-full bg-YellowDark rounded`} style={{ width: progress + '%' }}></span>
+        </div>
+    )
+}
