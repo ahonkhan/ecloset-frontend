@@ -31,9 +31,11 @@ export const DesktopMenu = () => {
                     <AiOutlineHeart className='text-xl' />
                 </button>
                 <div className="flex items-center gap-2">
-                    <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
-                        <MdShoppingCart className='text-xl' />
-                    </button>
+                    <Link to={'/cart'}>
+                        <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
+                            <MdShoppingCart className='text-xl' />
+                        </button>
+                    </Link>
                     <span className='font-Ubuntu font-medium text-gray-600'><span>৳ </span>0.00</span>
                 </div>
             </div>
@@ -45,12 +47,21 @@ export const MobileMenu = () => {
     const [IsLoading, setIsLoading] = useState(false);
 
     return (
-        <menu className={`flex ${style.HeaderPaddingMobile} justify-center bg-GreenLight py-2 bg-opacity-30`}>
+        <menu className={`flex ${style.HeaderPaddingMobile} gap-2 justify-center bg-GreenLight py-2 bg-opacity-30`}>
             <div className="search-bar bg-white  flex justify-between rounded-3xl items-center w-full h-[40px] md:h-[44px] px-1">
                 <input type="text" className='w-full font-Ubuntu bg-transparent border-none outline-none pl-3  text-[15px] text-gray-400 font-normal' placeholder='Search for product..' />
                 <button className='shrink-0 w-[36px] hover:bg-GreenLight duration-200 text-2xl text-white h-[36px] bg-Green rounded-full flex items-center justify-center'>
                     <MdSearch className={`${IsLoading ? style.pulse : ''}`} />
                 </button>
+            </div>
+
+            <div className="flex items-center gap-2">
+
+                <Link to={'/cart'}>
+                    <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
+                        <MdShoppingCart className='text-xl' />
+                    </button>
+                </Link>
             </div>
         </menu>
     )

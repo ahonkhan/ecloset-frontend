@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { MdShoppingCartCheckout } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 const CartTotal = () => {
     return (
         <section className='site-container mt-8'>
@@ -26,7 +27,12 @@ const CartTotal = () => {
                             <p className='font-semibold text-gray-500 font-WorkSans'>Total:</p>
                             <p className='font-medium text-gray-500 font-WorkSans'>$650</p>
                         </div>
-                        <button className='bg-LightBlue py-2.5 font-WorkSans shadow-2 duration-200 hover:bg-darkBlue px-2 rounded text-white'>Proceed To Checkout</button>
+                        <Link to={'/checkout'}>
+                            <button className='bg-LightBlue flex items-center gap-2 w-full justify-center py-2.5 font-WorkSans shadow-2 duration-200 hover:bg-darkBlue px-2 rounded text-white'>
+                                <MdShoppingCartCheckout />
+                                <span>Proceed To Checkout</span>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
