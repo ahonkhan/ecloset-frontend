@@ -17,11 +17,11 @@ const PaymentInformation = () => {
     const year = range(1970, date.getFullYear())
     // console.log(currentYear)
     return (
-        <div className='mt-8'>
+        <div className='mt-8 md:mt-0 w-full'>
             <h2 className="font-Ubuntu text-xl text-gray-800">Payment Information</h2>
 
 
-            <div className="box mt-4 w-full md:w-[420px] rounded-md shadow-1 py-6 px-6 bg-white">
+            <div className="box mt-4 w-full lg:w-[420px] rounded-md shadow-1 py-6 px-6 bg-white">
                 <div className="methods overflow-x-clip">
                     <div className="grid grid-cols-2 gap-2">
                         {

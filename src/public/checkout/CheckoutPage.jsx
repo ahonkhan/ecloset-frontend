@@ -11,11 +11,11 @@ const CheckoutPage = () => {
             <DefaultWrapper>
                 <Breadcrumb />
                 <HaveCoupon />
-                <div className="flex gap-[100px] site-container mt-8">
+                <div className="flex gap-8 md:gap-[50px] xl:gap-[100px] flex-col lg:flex-row site-container mt-8">
                     <div className="checkoutLayoutLeft w-full">
                         <CheckoutLeft />
                     </div>
-                    <div className="checkoutLayoutRight w-[450px] shrink-0">
+                    <div className="checkoutLayoutRight w-full lg:w-[450px] shrink-0">
                         <CheckoutRight />
                     </div>
                 </div>

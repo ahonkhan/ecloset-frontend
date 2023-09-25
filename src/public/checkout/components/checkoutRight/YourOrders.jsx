@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 const YourOrders = () => {
     return (
-        <div>
+        <div className='w-full'>
             <h2 className="font-Ubuntu text-xl text-gray-800">Your Orders</h2>
 
 
-            <div className="box mt-4 w-full md:w-[420px] rounded-md shadow-1 py-6 px-6 bg-white">
+            <div className="box mt-4 w-full  rounded-md shadow-1 py-6 px-6 bg-white">
                 <div className="box-body flex flex-col">
                     <div className="box-item hover:bg-gray-50 duration-200 select-none py-2 flex justify-between items-center">
                         <p className='font-semibold text-gray-500 font-WorkSans'>Sub Total:</p>
