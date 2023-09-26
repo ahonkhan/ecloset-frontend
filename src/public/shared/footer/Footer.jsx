@@ -10,7 +10,7 @@ import LogoWhite from "../assets/LogoWhite";
 
 const Footer = () => {
     return (
-        <footer className=" bg-Green text-White font-WorkSans mt-[200px] ">
+        <footer className=" bg-Green text-White font-WorkSans mt-8">
             <div className="site-container pt-6">
                 <div className="footer-wrapper py-10 flex gap-y-6 flex-wrap sm:justify-between">
                     <div className="footerItems flex justify-center lg:justify-start w-full items-center md:items-start lg:w-fit">

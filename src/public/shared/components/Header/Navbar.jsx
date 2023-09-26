@@ -83,9 +83,9 @@ export const MobileNavbar = () => {
                 <LogoGreen />
             </Link>
 
-            <button>
+            <Link to={'/profile/index'}>
                 <AiOutlineUser className='text-2xl text-DarkGray' />
-            </button>
+            </Link>
 
 
         </nav>

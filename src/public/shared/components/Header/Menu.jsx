@@ -24,9 +24,11 @@ export const DesktopMenu = () => {
                 }
             </div>
             <div className="flex items-center gap-4">
-                <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
-                    <AiOutlineUser className='text-xl' />
-                </button>
+                <Link to={'/profile/index'}>
+                    <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
+                        <AiOutlineUser className='text-xl' />
+                    </button>
+                </Link>
                 <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
                     <AiOutlineHeart className='text-xl' />
                 </button>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PageAnimation } from '../shared/components/page/PageAnimation'
 import DefaultWrapper from '../shared/components/wrappers/DefaultWrapper'
 import Breadcrumb from '../shared/components/breadcrumb/Breadcrumb'
@@ -6,6 +6,8 @@ import HaveCoupon from './components/coupon/HaveCoupon'
 import CheckoutLeft from './components/CheckoutLeft/CheckoutLeft'
 import CheckoutRight from './components/checkoutRight/CheckoutRight'
 const CheckoutPage = () => {
+
+
     return (
         <PageAnimation>
             <DefaultWrapper>
