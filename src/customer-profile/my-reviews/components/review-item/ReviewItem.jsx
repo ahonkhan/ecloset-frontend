@@ -4,26 +4,18 @@ import { BsThreeDotsVertical } from 'react-icons/bs'
 import './review-item.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import ReviewOptions from './ReviewOptions'
-const ReviewItem = ({}) => {
+const ReviewItem = ({ }) => {
     let text = "আলহামদুলিল্লাহ, আমি সফল।আমার গাছে ফল আসিয়াছে 🥰। তাদের দেওয়া নিয়ম অনুযায়ী আমি যত্ন করেছি। লাগানোর ২৭ মাস পর ফলন আসছে।💓💓💓💓🥰।। অনেক কষ্টের টাকা দিয়ে প্রতি মাসে ১ টা বা কখনো ২/৩ মাস পর পর একটা চারা কিনতাম। এই নিয়ে মোট ১৭ টি চারা কিনেছি। আস্তে আস্তে টাকা হলে আরো কিনার ইচ্ছে আছে। প্রথম এ আমি ভাবছি ভুয়া গাছ। পরে কৃিষি অফিসার গাছ দেখে বলছে, এইটা অরিজিনাল। যত্ন করেন।২/৩ বছরে ফলন পাবেন। ধন্যবাদ সেলারকে।💓💓💓    "
     const [textSeeMore, setTextSeeMore] = useState(false)
     const [moreOptionActive, setMoreOptionActive] = useState(false);
-    const reviewItem = useRef();
-    // const [MenuPositionTop, setMenuPositionTop] = useState(false);
-    // // const [MobileMenuPositionTop, setMobileMenuPositionTop] = useState(false);
-    // window.addEventListener("scroll", (e) => {
-    //     let currentItem = reviewItem.current;
-    //     if (currentItem.offsetTop > 500) {
-    //         setMenuPositionTop(true);
-    //     } else {
-    //         setMenuPositionTop(false)
-    //     }
-    // })
 
     return (
-        <div ref={reviewItem} className={`review-item group flex-col sm:flex-row ${moreOptionActive ? 'bg-gray-100' : ''} select-none flex gap-3 duration-300 hover:bg-gray-100 py-4 rounded px-4`}>
-            <div className="shrink-0 flex justify-between">
-                <img className='w-[100px] rounded' src={productImg} alt="" />
+        <div className={`review-item group flex-col sm:flex-row ${moreOptionActive ? 'bg-gray-100' : ''} select-none flex gap-3 duration-300 hover:bg-gray-100 py-4 rounded px-4`}>
+            <div className="shrink-0 flex h-fit justify-between">
+
+                <div className="shrink-0">
+                    <img className='w-[100px] rounded' src={productImg} alt="" />
+                </div>
                 <div className="flex sm:hidden relative justify-between">
                     <button onClick={() => setMoreOptionActive(!moreOptionActive)} className={`w-7 shrink-0 ${moreOptionActive ? 'opacity-100 bg-gray-300' : 'opacity-0 group-hover:opacity-100 hover:bg-gray-300'}   rounded-full flex items-center justify-center h-7 duration-200 active:scale-95 `}>
                         <BsThreeDotsVertical />
