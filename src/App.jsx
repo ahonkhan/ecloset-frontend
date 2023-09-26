@@ -6,6 +6,7 @@ import Ahon from './routes/Ahon';
 import { CartPage, CheckoutPage, HomePage, ProductDetailsPage, ProfileHomePage, ProfileOrderPage, SearchPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
+import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
 const App = () => {
   return (
     <>
@@ -19,13 +20,13 @@ const App = () => {
         <Route path='/profile' element={<Navigate to={'/profile/index'} />} />
         <Route path='/profile/index' element={<ProfileLayout><ProfileHomePage /></ProfileLayout>} />
         <Route path='/profile/orders' element={<ProfileLayout><ProfileOrderPage /></ProfileLayout>} />
-        <Route path='/profile/inbox' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
+        <Route path='/profile/inbox' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
         <Route path='/profile/wishlist' element={<ProfileLayout><WishlistPage /></ProfileLayout>} />
-        <Route path='/profile/refunds' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
-        <Route path='/profile/reviews' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
-        <Route path='/profile/address' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
-        <Route path='/profile/security' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
-        <Route path='/profile/settings' element={<ProfileLayout><h1>This is settings</h1></ProfileLayout>} />
+        <Route path='/profile/refunds' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/reviews' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/address' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/security' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/settings' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
 
         {/* profile end */}
 
