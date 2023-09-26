@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
 import profile from './assets/profile.jpg'
 import { AiOutlineCamera, AiOutlineCheck } from 'react-icons/ai'
@@ -8,6 +8,9 @@ import { range } from '../../utils/Library'
 
 const ProfileHomePage = () => {
     let date = new Date();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <PageAnimation>
             <div className="wrapper">

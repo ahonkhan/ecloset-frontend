@@ -3,7 +3,7 @@ import './App.scss';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Tamanna from './routes/Tamanna';
 import Ahon from './routes/Ahon';
-import { CartPage, CheckoutPage, HomePage, ProductDetailsPage, ProfileHomePage, SearchPage } from './routes/routes';
+import { CartPage, CheckoutPage, HomePage, ProductDetailsPage, ProfileHomePage, ProfileOrderPage, SearchPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
 const App = () => {
@@ -18,9 +18,9 @@ const App = () => {
         {/* profile */}
         <Route path='/profile' element={<Navigate to={'/profile/index'} />} />
         <Route path='/profile/index' element={<ProfileLayout><ProfileHomePage /></ProfileLayout>} />
-        <Route path='/profile/orders' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
+        <Route path='/profile/orders' element={<ProfileLayout><ProfileOrderPage /></ProfileLayout>} />
         <Route path='/profile/inbox' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
-        <Route path='/profile/wishlist' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
+        <Route path='/profile/wishlist' element={<ProfileLayout><WishlistPage /></ProfileLayout>} />
         <Route path='/profile/refunds' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
         <Route path='/profile/reviews' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
         <Route path='/profile/address' element={<ProfileLayout><h1>This is Orders</h1></ProfileLayout>} />
