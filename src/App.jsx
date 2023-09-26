@@ -3,7 +3,7 @@ import './App.scss';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Tamanna from './routes/Tamanna';
 import Ahon from './routes/Ahon';
-import { CartPage, CheckoutPage, HomePage, ProductDetailsPage, ProfileHomePage, ProfileOrderPage, SearchPage, WishlistPage } from './routes/routes';
+import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileHomePage, ProfileOrderPage, SearchPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
@@ -23,7 +23,7 @@ const App = () => {
         <Route path='/profile/inbox' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
         <Route path='/profile/wishlist' element={<ProfileLayout><WishlistPage /></ProfileLayout>} />
         <Route path='/profile/refunds' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
-        <Route path='/profile/reviews' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/reviews' element={<ProfileLayout><MyReviewsPage /></ProfileLayout>} />
         <Route path='/profile/address' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
         <Route path='/profile/security' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
         <Route path='/profile/settings' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />

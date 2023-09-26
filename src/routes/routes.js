@@ -1,3 +1,4 @@
+import MyReviewsPage from "../customer-profile/my-reviews/MyReviewsPage";
 import ProfileOrderPage from "../customer-profile/orders/ProfileOrderPage";
 import ProfileHomePage from "../customer-profile/profile-index/ProfileHomePage";
 import WishlistPage from "../customer-profile/wishlist/WishlistPage";
@@ -16,6 +17,7 @@ export {
     ProfileHomePage,
     ProfileOrderPage,
     WishlistPage,
+    MyReviewsPage,
 
 
 

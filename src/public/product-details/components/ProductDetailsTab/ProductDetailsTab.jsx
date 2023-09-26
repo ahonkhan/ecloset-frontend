@@ -1,11 +1,19 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DescriptionTab from './DescriptionTab';
 import ReviewsTab from '../ProductReviewTab/ReviewsTab';
+import { useLocation } from 'react-router-dom';
 
 const ProductDetailsTab = () => {
     const [activeTab, setActiveTab] = useState(0);
     const tabs = ['Description', 'Reviews']
+
+    const location = useLocation();
+    useEffect(() => {
+        if (location.search.split('?tab=')[1] === 'review') {
+            setActiveTab(1)
+        }
+    }, [])
     return (
         <section className='mt-8 lg:mt-16 site-container'>
 

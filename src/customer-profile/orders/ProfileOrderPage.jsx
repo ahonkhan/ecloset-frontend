@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -6,6 +6,9 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 
 const ProfileOrderPage = () => {
     const [tabIndex, setTabIndex] = useState(0);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <PageAnimation>
             <div className="overflow-x-auto " style={{ 'scrollbarWidth': 'thin' }}>

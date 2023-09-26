@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
 import { MdAdd, MdAddShoppingCart, MdChevronLeft, MdChevronRight, MdRemove } from 'react-icons/md'
 import img from './assets/image.png'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowRight, AiOutlineShoppingCart } from 'react-icons/ai'
 const WishlistPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <PageAnimation>
             <div className="overflow-x-auto" style={{ 'scrollbarWidth': 'thin' }}>
