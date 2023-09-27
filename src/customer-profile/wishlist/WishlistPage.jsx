@@ -7,6 +7,8 @@ import { AiOutlineArrowRight, AiOutlineShoppingCart } from 'react-icons/ai'
 const WishlistPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
+        document.title = 'E-closet | My WishList'
+
     }, [])
     return (
         <PageAnimation>

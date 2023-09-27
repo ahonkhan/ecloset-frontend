@@ -7,6 +7,8 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 const ProfileOrderPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
+        document.title = 'E-closet | My Orders'
+
     }, [])
     return (
         <PageAnimation>

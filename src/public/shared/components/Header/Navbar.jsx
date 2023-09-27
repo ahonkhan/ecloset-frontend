@@ -28,7 +28,7 @@ export const Navbar = () => {
     const globalContext = useContext(GetGlobalContext);
     return (
         <nav className={`${style.HeaderPaddingDesktop} ${isFixed ? 'py-2.5' : 'py-4'} duration-200 bg-white hidden lg:flex sticky top-0 items-center ${globalContext.ModalOpenStatus ? '' : 'z-[70]'}  gap-12 `}>
-            <Link to={'/'} className="logo">
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/'} className="logo">
                 <LogoGreen />
             </Link>
             <div className="search-bar border-[1.5px] flex justify-between rounded-3xl items-center border-gray-300 w-full h-[44px] px-1">
@@ -79,7 +79,7 @@ export const MobileNavbar = () => {
             <button onClick={() => context.setMobileSidebarStatus(true)}>
                 <MdMenu className='text-2xl text-DarkGray' />
             </button>
-            <Link to={'/'} className={`logo duration-300 `}>
+            <Link onClick={() => window.scrollTo(0, 0)} to={'/'} className={`logo duration-300 `}>
                 <LogoGreen />
             </Link>
 

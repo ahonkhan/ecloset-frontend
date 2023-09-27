@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import DefaultWrapper from '../shared/components/wrappers/DefaultWrapper'
 import Breadcrumb from '../shared/components/breadcrumb/Breadcrumb'
 import { animate, motion } from 'framer-motion'
@@ -7,6 +7,11 @@ import { SharedContext } from '../shared/context/Context'
 import SearchBreadCrumb from './components/breadcrumb/SearchBreadCrumb'
 import { SearchContext } from './context/SearchContext'
 const SearchPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        document.title = 'E-closet | Electronics Headphones'
+
+    }, [])
     return (
         <SharedContext>
             <SearchContext>

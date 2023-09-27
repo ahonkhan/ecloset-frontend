@@ -10,6 +10,7 @@ import { GetGlobalContext } from '../../context/GlobalContext'
 const ProfileAddressPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
+        document.title = 'E-closet | Shipping Address'
     }, [])
     const [modalStatus, setModalStatus] = useState(false)
     const GlobalContext = useContext(GetGlobalContext)

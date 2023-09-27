@@ -7,6 +7,8 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 const ProfileRefundsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.title = 'E-closet | My Refunds'
+
   }, [])
   return (
     <PageAnimation>

@@ -6,7 +6,11 @@ import HaveCoupon from './components/coupon/HaveCoupon'
 import CheckoutLeft from './components/CheckoutLeft/CheckoutLeft'
 import CheckoutRight from './components/checkoutRight/CheckoutRight'
 const CheckoutPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        document.title = 'E-closet | Checkout'
 
+    }, [])
 
     return (
         <PageAnimation>

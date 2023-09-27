@@ -10,6 +10,8 @@ const ProfileHomePage = () => {
     let date = new Date();
     useEffect(() => {
         window.scrollTo(0, 0)
+        document.title = 'E-closet | Profile'
+
     }, [])
     return (
         <PageAnimation>
