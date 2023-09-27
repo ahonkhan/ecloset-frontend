@@ -3,11 +3,13 @@ import display_img from '../../assets/image.png'
 import { MdAdd, MdRemove, MdStar } from 'react-icons/md'
 import { ButtonAddToCart, ButtonHeart } from '../buttons/Buttons'
 import ImageWrapper from '../imagewrapper/ImageWrapper'
+import company from '../../assets/company.jpg'
+import { Link } from 'react-router-dom'
 const ProductInfoWrapper = () => {
     return (
         <div className='site-container mt-8 flex gap-8  flex-col md:flex-row'>
             <ImageWrapper />
-            <div className="content-wrapper w-full bg-white p-4 rounded">
+            <div className="content-wrapper h-fit w-full bg-white px-4 py-8 rounded">
                 <h1 className="title text-2xl font-WorkSans text-gray-800">Black Short Tops</h1>
                 <div className="rating flex items-center gap-1">
                     <MdStar className='text-YellowDark' />
@@ -102,6 +104,19 @@ const ProductInfoWrapper = () => {
                         </li>
                     </ul>
 
+                </div>
+                <div className="seller-info-area mt-4">
+                    <div className="seller-info-wrapper flex items-center gap-4">
+                        <Link to="/shop" className="">
+                            <img className='w-12 h-12 rounded-full' src={company} alt="" />
+                        </Link>
+                        <div className="">
+                            <Link to={'/shop'} className='font-WorkSans text-gray-800 font-medium'>SamSung</Link>
+                            <p className='font-WorkSans text-sm text-gray-600 font-medium'>(451) Rating</p>
+
+                        </div>
+                        <Link to={'/profile/inbox?chat=ecloset.samsung'} className='px-4 py-2 rounded-sm bg-GreenLight font-WorkSans text-white'>Send Message</Link>
+                    </div>
                 </div>
             </div>
         </div>
