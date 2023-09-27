@@ -1,6 +1,10 @@
 import React, { useContext, useState } from 'react'
-import { AiOutlineComment, AiOutlineCustomerService, AiOutlineHeart, AiOutlineHeatMap, AiOutlineLock, AiOutlineLogout, AiOutlineMessage, AiOutlineSetting, AiOutlineShoppingCart, AiOutlineUser, AiOutlineWallet } from 'react-icons/ai'
-import { MdChevronLeft, MdShoppingBag } from 'react-icons/md'
+import { AiOutlineComment, AiOutlineHeart, AiOutlineLogout, AiOutlineSetting, AiOutlineShoppingCart, AiOutlineUser, AiOutlineWallet } from 'react-icons/ai'
+import { MdChevronLeft, MdSecurity } from 'react-icons/md'
+import { FiShoppingBag } from 'react-icons/fi'
+import { RiRefund2Line } from 'react-icons/ri'
+import { BiMessageRoundedDetail } from 'react-icons/bi'
+import { LiaAddressBook } from 'react-icons/lia'
 import { Link, NavLink } from 'react-router-dom'
 import './Sidebar.scss'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -8,13 +12,13 @@ import { GetProfileContext } from '../../context/ProfileContext'
 const ProfileSidebar = () => {
     const menu = [
         { 'name': 'Profile', 'icon': <AiOutlineUser />, 'path': '/profile/index' },
-        { 'name': 'Orders', 'icon': <MdShoppingBag />, 'path': '/profile/orders' },
-        { 'name': 'Inbox', 'icon': <AiOutlineMessage />, 'path': '/profile/inbox' },
+        { 'name': 'Orders', 'icon': <FiShoppingBag />, 'path': '/profile/orders' },
+        { 'name': 'Inbox', 'icon': <BiMessageRoundedDetail />, 'path': '/profile/inbox' },
         { 'name': 'Wishlist', 'icon': <AiOutlineHeart />, 'path': '/profile/wishlist' },
-        { 'name': 'Refunds', 'icon': <AiOutlineWallet />, 'path': '/profile/refunds' },
+        { 'name': 'Refunds', 'icon': <RiRefund2Line />, 'path': '/profile/refunds' },
         { 'name': 'Reviews', 'icon': <AiOutlineComment />, 'path': '/profile/reviews' },
-        { 'name': 'Address', 'icon': <AiOutlineHeatMap />, 'path': '/profile/address' },
-        { 'name': 'Security', 'icon': <AiOutlineLock />, 'path': '/profile/security' },
+        { 'name': 'Address', 'icon': <LiaAddressBook />, 'path': '/profile/address' },
+        { 'name': 'Security', 'icon': <MdSecurity />, 'path': '/profile/security' },
         { 'name': 'Settings', 'icon': <AiOutlineSetting />, 'path': '/profile/settings' },
     ]
     const context = useContext(GetProfileContext)

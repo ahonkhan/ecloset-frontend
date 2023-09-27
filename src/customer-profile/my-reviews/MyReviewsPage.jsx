@@ -8,7 +8,7 @@ const MyReviewsPage = () => {
     }, [])
     return (
         <PageAnimation>
-            <div className="">
+            <div className="min-h-[510px]">
                 {
                     [...new Array(6)].map(item =>
                         <ReviewItem />

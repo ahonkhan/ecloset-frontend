@@ -1,6 +1,8 @@
+import ProfileAddressPage from "../customer-profile/address/ProfileAddressPage";
 import MyReviewsPage from "../customer-profile/my-reviews/MyReviewsPage";
 import ProfileOrderPage from "../customer-profile/orders/ProfileOrderPage";
 import ProfileHomePage from "../customer-profile/profile-index/ProfileHomePage";
+import ProfileRefundsPage from "../customer-profile/refunds/ProfileRefundsPage";
 import WishlistPage from "../customer-profile/wishlist/WishlistPage";
 import CartPage from "../public/cart-page/CartPage";
 import CheckoutPage from "../public/checkout/CheckoutPage";
@@ -18,6 +20,8 @@ export {
     ProfileOrderPage,
     WishlistPage,
     MyReviewsPage,
+    ProfileRefundsPage,
+    ProfileAddressPage,
 
 
 
