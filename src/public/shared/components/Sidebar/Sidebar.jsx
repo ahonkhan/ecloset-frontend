@@ -4,11 +4,14 @@ import { MdChevronRight, MdElectricBike, MdElectricBolt, MdEmojiFoodBeverage, Md
 import { GetSharedContext } from "../../context/Context"
 import { Link } from "react-router-dom"
 import { AnimatePresence, animate, motion } from "framer-motion"
+import { GetGlobalContext } from "../../../../context/GlobalContext"
 export const DesktopSidebar = () => {
     const context = useContext(GetSharedContext)
+    const globalContext = useContext(GetGlobalContext)
+
     return (
         <>
-            <aside onMouseOver={() => context.SetDesktopSidebarStatus(true)} onMouseLeave={() => context.SetDesktopSidebarStatus(false)} className={`overflow-hidden fixed ${context.desktopSidebarStatus ? 'w-[260px]' : 'w-[60px]'} flex py-4 duration-500  flex-col left-0 z-[100] border-r border-LightGray top-0 h-full bg-white `}>
+            <aside onMouseOver={() => context.SetDesktopSidebarStatus(true)} onMouseLeave={() => context.SetDesktopSidebarStatus(false)} className={`overflow-hidden fixed ${context.desktopSidebarStatus ? 'w-[260px]' : 'w-[60px]'} flex py-4 duration-500  flex-col left-0 ${globalContext.ModalOpenStatus ? '' : 'z-[100]'} border-r border-LightGray top-0 h-full bg-white `}>
 
                 <div className="flex ml-[10px] gap-2 mr-[10px] bg-GreenLight rounded-3xl items-center">
 
@@ -74,9 +77,10 @@ export const MobileSidebar = () => {
         setActiveCategory(0);
         setActiveSubCategory(0);
     }
+    const globalContext = useContext(GetGlobalContext)
     return (
         <>
-            <aside className={`fixed ${context.mobileSidebarStatus ? 'translate-x-0 opacity-100' : ''} flex flex-col opacity-0 duration-300 border-r -translate-x-full border-gray-200  top-0 h-screen left-0 z-[100] bg-white w-[240px]  md:w-[350px] `}>
+            <aside className={`fixed ${context.mobileSidebarStatus ? 'translate-x-0 opacity-100' : ''} flex flex-col opacity-0 duration-300 border-r -translate-x-full border-gray-200  top-0 h-screen left-0 ${globalContext.ModalOpenStatus ? '' : 'z-[100]'} bg-white w-[240px]  md:w-[350px] `}>
                 <div className="sidebar-top shrink-0 grid grid-cols-2">
                     {
                         toggleMenu.map((item, index) =>

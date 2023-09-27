@@ -7,9 +7,10 @@ import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, Pr
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
+import { GlobalContext } from './context/GlobalContext';
 const App = () => {
   return (
-    <>
+    <GlobalContext>
       <Routes>
         <Route path='/' element={<LayoutDefault><HomePage /></LayoutDefault>} />
         <Route path='/search' element={<LayoutDefault><SearchPage /></LayoutDefault>} />
@@ -33,7 +34,7 @@ const App = () => {
         <Route path='/tamanna' element={<Tamanna />} />
         <Route path='/ahon' element={<Ahon />} />
       </Routes>
-    </>
+    </GlobalContext>
   )
 }
 

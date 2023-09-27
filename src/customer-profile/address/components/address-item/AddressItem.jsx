@@ -45,13 +45,6 @@ const AddressItem = () => {
 
             </AnimatePresence>
 
-            <div className="modal-area flex items-center justify-center w-screen h-screen fixed bg-black top-0 left-0 z-[200] bg-opacity-50">
-                <div className="modal-wrapper select-text px-4 py-8 w-[700px] h-[600px] bg-white rounded-md">
-                    <div className="modal-header text-center">
-                        <h2 className='text-2xl'>Add new address</h2>
-                    </div>
-                </div>
-            </div>
         </div>)
 }
 

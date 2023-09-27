@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineUser, AiOutlineWhatsApp } from 'react-icons/ai';
 import { GetSharedContext } from '../../context/Context';
 import { AnimatePresence, motion } from 'framer-motion';
+import { GetGlobalContext } from '../../../../context/GlobalContext';
 export const Navbar = () => {
     const [IsLoading, setIsLoading] = useState(false);
 
@@ -24,8 +25,9 @@ export const Navbar = () => {
 
 
     })
+    const globalContext = useContext(GetGlobalContext);
     return (
-        <nav className={`${style.HeaderPaddingDesktop} ${isFixed ? 'py-2.5' : 'py-4'} duration-200 bg-white hidden lg:flex sticky top-0 items-center z-[70] gap-12 `}>
+        <nav className={`${style.HeaderPaddingDesktop} ${isFixed ? 'py-2.5' : 'py-4'} duration-200 bg-white hidden lg:flex sticky top-0 items-center ${globalContext.ModalOpenStatus ? '' : 'z-[70]'}  gap-12 `}>
             <Link to={'/'} className="logo">
                 <LogoGreen />
             </Link>
@@ -60,9 +62,7 @@ export const Navbar = () => {
 export const MobileNavbar = () => {
     const context = useContext(GetSharedContext);
     const [isFixed, setIsFixed] = useState(false);
-
-    var lastScrollPosition = document.documentElement.scrollTop;
-
+    const globalContext = useContext(GetGlobalContext);
     window.addEventListener('scroll', () => {
 
         if (window.scrollY > 200) {
@@ -75,7 +75,7 @@ export const MobileNavbar = () => {
 
     })
     return (
-        <nav className={`${style.HeaderPaddingMobile} ${isFixed ? 'py-1.5 shadow-1' : 'py-2'} duration-300 sticky top-0 z-[70] lg:hidden flex bg-white items-center justify-between gap-12`}>
+        <nav className={`${style.HeaderPaddingMobile} ${isFixed ? 'py-1.5 shadow-1' : 'py-2'} duration-300 sticky top-0 ${globalContext.ModalOpenStatus ? '' : 'z-[70]'} lg:hidden flex bg-white items-center justify-between gap-12`}>
             <button onClick={() => context.setMobileSidebarStatus(true)}>
                 <MdMenu className='text-2xl text-DarkGray' />
             </button>

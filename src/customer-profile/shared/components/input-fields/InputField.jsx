@@ -67,3 +67,11 @@ export const SelectDefault = ({ placeholder, data, preText }) => {
         </div>
     )
 }
+
+export const InputDefault = ({ type, placeholder }) => {
+    return (
+        <div className="input-item">
+            <input type={type} className='bg-gray-100 py-3 rounded outline-none w-full px-4 font-WorkSans text-gray-600' placeholder={placeholder} />
+        </div>
+    )
+}
