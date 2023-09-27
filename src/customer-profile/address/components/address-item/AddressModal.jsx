@@ -3,68 +3,130 @@ import { InputDefault, SelectDefault } from '../../../shared/components/input-fi
 import { IoMdAdd } from 'react-icons/io'
 import { MdOutlineCancel } from 'react-icons/md'
 import { GetGlobalContext } from '../../../../context/GlobalContext'
+import { DefaultModal } from '../../../../public/shared/components/modals/DefaultModal'
 const AddressModal = ({ setModalStatus, modalStatus }) => {
     const globalContext = useContext(GetGlobalContext)
 
     return (
 
-        <div className="modal-area flex items-center justify-center w-screen h-screen fixed bg-black top-0 left-0 z-[500] bg-opacity-50">
-            <div style={{ 'scrollbarWidth': 'thin' }} className="modal-wrapper font-WorkSans select-text px-4 py-8 h-full w-full overflow-y-auto sm:w-[500px] sm:h-[500px] sm:overflow-y-auto md:h-auto md:w-[600px] md:max-h-[600px] bg-white rounded-md">
-                <div className="modal-header text-center">
-                    <h2 className='text-2xl'>Add new address</h2>
-                </div>
-                <form className='flex flex-col gap-2 mt-8' action="" onSubmit={(e) => e.preventDefault()}>
+        // <div className="modal-area flex items-center justify-center w-screen h-screen fixed bg-black top-0 left-0 z-[500] bg-opacity-50">
+        //     <div className="relative w-full sm:w-[500px] sm:h-[500px] md:w-[600px] ">
+        //         <div className="absolute top-0 -translate-x-2 translate-y-2 sm:translate-x-3 sm:-translate-y-2 right-0 z-[10]">
+        //             <button onClick={() => { setModalStatus(false); globalContext.setModalOpenStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='text-xl bg-slate-800 text-white w-7 h-7 flex items-center justify-center rounded-full'><MdOutlineCancel /></button>
+        //         </div>
+        //         <div style={{ 'scrollbarWidth': 'thin' }} className="modal-wrapper  font-WorkSans select-text px-4 py-8 h-full  overflow-y-auto  sm:overflow-y-auto md:h-auto md:max-h-[600px] bg-white rounded-md">
 
-                    <div className="item">
-                        <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
-                    </div>
-                    <div className="item">
-                        <SelectDefault placeholder={'Country'} data={['Bangladesh', 'India', 'Japan', 'China', 'Singapur']} />
-                    </div>
-                    <div className="item">
-                        <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
-                    </div>
-                    <div className="item">
-                        <SelectDefault placeholder={'Sub District'} data={['Mithapukur', 'Peerganj', 'Ghoraghat', 'Sadullahpur', 'Rangpur Sadar']} />
-                    </div>
-                    <div className="item">
-                        <InputDefault placeholder={'Street Address'} type={'text'} />
-                    </div>
-                    <div className="item">
-                        <InputDefault placeholder={'Appartment Number'} type={'text'} />
-                    </div>
-                    <div className="item">
-                        <InputDefault placeholder={'Postal/Zip'} type={'text'} />
-                    </div>
-                    <div className="item">
-                        <InputDefault placeholder={'Phone'} type={'text'} />
-                    </div>
-                    <div className="item">
-                        <InputDefault placeholder={'Email'} type={'email'} />
-                    </div>
 
-                    <div className="item">
-                        <SelectDefault placeholder={'Address Type`'} data={['Home', 'Office', 'Default']} />
-                    </div>
+        //             <div className="modal-header text-center">
+        //                 <h2 className='text-2xl'>Add new address</h2>
+        //             </div>
+        //             <form className='flex flex-col gap-2 mt-8' action="" onSubmit={(e) => e.preventDefault()}>
 
-                </form>
-                <div className="modal-footer flex justify-end items-center mt-4 gap-4">
-                    <button onClick={() => { setModalStatus(false); globalContext.setModalOpenStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='flex items-center gap-2 px-4 py-2 text-white rounded bg-rose-500'>
-                        <span>Cancel</span>
-                        <span>
-                            <MdOutlineCancel />
-                        </span>
-                    </button>
-                    <button className='flex items-center gap-2 px-4 py-2 text-white rounded bg-slate-800'>
-                        <span>Add</span>
-                        <span>
-                            <IoMdAdd />
-                        </span>
-                    </button>
-                </div>
+        //                 <div className="item">
+        //                     <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <SelectDefault placeholder={'Country'} data={['Bangladesh', 'India', 'Japan', 'China', 'Singapur']} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <SelectDefault placeholder={'Sub District'} data={['Mithapukur', 'Peerganj', 'Ghoraghat', 'Sadullahpur', 'Rangpur Sadar']} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <InputDefault placeholder={'Street Address'} type={'text'} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <InputDefault placeholder={'Appartment Number'} type={'text'} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <InputDefault placeholder={'Postal/Zip'} type={'text'} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <InputDefault placeholder={'Phone'} type={'text'} />
+        //                 </div>
+        //                 <div className="item">
+        //                     <InputDefault placeholder={'Email'} type={'email'} />
+        //                 </div>
 
+        //                 <div className="item">
+        //                     <SelectDefault placeholder={'Address Type`'} data={['Home', 'Office', 'Default']} />
+        //                 </div>
+
+        //             </form>
+        //             <div className="modal-footer flex justify-end items-center mt-4 gap-4">
+        //                 <button onClick={() => { setModalStatus(false); globalContext.setModalOpenStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='flex items-center gap-2 px-4 py-2 text-white rounded bg-rose-500'>
+        //                     <span>Cancel</span>
+        //                     <span>
+        //                         <MdOutlineCancel />
+        //                     </span>
+        //                 </button>
+        //                 <button className='flex items-center gap-2 px-4 py-2 text-white rounded bg-slate-800'>
+        //                     <span>Add</span>
+        //                     <span>
+        //                         <IoMdAdd />
+        //                     </span>
+        //                 </button>
+        //             </div>
+
+        //         </div>
+        //     </div>
+        // </div>
+        <DefaultModal setModalStatus={setModalStatus} modalStatus={modalStatus}>
+            <div className="modal-header text-center">
+                <h2 className='text-2xl'>Add new address</h2>
             </div>
-        </div>
+            <form className='flex flex-col gap-2 mt-8' action="" onSubmit={(e) => e.preventDefault()}>
+
+                <div className="item">
+                    <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
+                </div>
+                <div className="item">
+                    <SelectDefault placeholder={'Country'} data={['Bangladesh', 'India', 'Japan', 'China', 'Singapur']} />
+                </div>
+                <div className="item">
+                    <SelectDefault placeholder={'District'} data={['Rangpur', 'Dhaka', 'Gaibandah', 'Rajshahi', 'Dinajpur', 'Kumilla']} />
+                </div>
+                <div className="item">
+                    <SelectDefault placeholder={'Sub District'} data={['Mithapukur', 'Peerganj', 'Ghoraghat', 'Sadullahpur', 'Rangpur Sadar']} />
+                </div>
+                <div className="item">
+                    <InputDefault placeholder={'Street Address'} type={'text'} />
+                </div>
+                <div className="item">
+                    <InputDefault placeholder={'Appartment Number'} type={'text'} />
+                </div>
+                <div className="item">
+                    <InputDefault placeholder={'Postal/Zip'} type={'text'} />
+                </div>
+                <div className="item">
+                    <InputDefault placeholder={'Phone'} type={'text'} />
+                </div>
+                <div className="item">
+                    <InputDefault placeholder={'Email'} type={'email'} />
+                </div>
+
+                <div className="item">
+                    <SelectDefault placeholder={'Address Type`'} data={['Home', 'Office', 'Default']} />
+                </div>
+
+            </form>
+            <div className="modal-footer flex justify-end items-center mt-4 gap-4">
+                <button onClick={() => { setModalStatus(false); globalContext.setModalOpenStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='flex items-center gap-2 px-4 py-2 text-white rounded bg-rose-500'>
+                    <span>Cancel</span>
+                    <span>
+                        <MdOutlineCancel />
+                    </span>
+                </button>
+                <button className='flex items-center gap-2 px-4 py-2 text-white rounded bg-slate-800'>
+                    <span>Add</span>
+                    <span>
+                        <IoMdAdd />
+                    </span>
+                </button>
+            </div>
+        </DefaultModal>
     )
 }
 
