@@ -5,7 +5,6 @@ import ReviewItem from './components/review-item/ReviewItem'
 const MyReviewsPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = 'E-closet | My Reviews'
 
     }, [])
     return (

@@ -8,6 +8,7 @@ import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
 import { GlobalContext } from './context/GlobalContext';
+import Redirect from './routes/redirect/Redirect';
 const App = () => {
   return (
     <GlobalContext>
@@ -18,7 +19,7 @@ const App = () => {
         <Route path='/cart' element={<LayoutDefault><CartPage /></LayoutDefault>} />
         <Route path='/checkout' element={<LayoutDefault><CheckoutPage /></LayoutDefault>} />
         {/* profile */}
-        <Route path='/profile' element={<Navigate to={'/profile/index'} />} />
+        <Route path='/profile' element={<Redirect location={'/profile/index'} />} />
         <Route path='/profile/index' element={<ProfileLayout><ProfileHomePage /></ProfileLayout>} />
         <Route path='/profile/orders' element={<ProfileLayout><ProfileOrderPage /></ProfileLayout>} />
         <Route path='/profile/inbox' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />

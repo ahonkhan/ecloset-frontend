@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { InputDefault, SelectDefault } from '../../../shared/components/input-fields/InputField'
 import { IoMdAdd } from 'react-icons/io'
 import { MdOutlineCancel } from 'react-icons/md'
@@ -6,10 +6,13 @@ import { GetGlobalContext } from '../../../../context/GlobalContext'
 import { DefaultModal } from '../../../../public/shared/components/modals/DefaultModal'
 const AddressModal = ({ setModalStatus, modalStatus }) => {
     const globalContext = useContext(GetGlobalContext)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
 
-     
+
         <DefaultModal setModalStatus={setModalStatus} modalStatus={modalStatus}>
             <div className="modal-header text-center">
                 <h2 className='text-2xl'>Add new address</h2>

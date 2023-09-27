@@ -5,3 +5,11 @@
 .site-container {
     @apply px-4
 }
+
+.profile-container {
+    @apply px-2 py-2 md:px-4 md:py-0 md:pt-4;
+}
+
+.profile-title {
+    @apply text-2xl text-gray-800 font-WorkSans;
+}

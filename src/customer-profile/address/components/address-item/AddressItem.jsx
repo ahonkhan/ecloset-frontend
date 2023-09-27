@@ -1,9 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BiShow, BiDotsVerticalRounded } from 'react-icons/bi'
 import { MdOutlineDeleteOutline } from 'react-icons/md'
 const AddressItem = () => {
-    const [enableMenu, setEnableMenu] = useState(false)
+    const [enableMenu, setEnableMenu] = useState(false);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div className="address-item relative px-4 py-6 sm:px-4 sm:py-4 bg-gray-100 rounded text-gray-600 font-WorkSans flex items-center justify-between">
             <div className="flex gap-4">

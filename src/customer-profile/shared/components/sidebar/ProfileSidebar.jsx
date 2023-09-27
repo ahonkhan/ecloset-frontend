@@ -24,7 +24,7 @@ const ProfileSidebar = () => {
     const context = useContext(GetProfileContext)
     const Setdefault = () => {
         context.setMenuStatus(false)
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
     }
     return (
         <aside className='bg-white rounded py-2'>

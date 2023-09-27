@@ -7,12 +7,11 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 const ProfileRefundsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
-    document.title = 'E-closet | My Refunds'
-
   }, [])
+
   return (
     <PageAnimation>
-      <div className="wrapper min-h-[510px]">
+      <div className="wrapper min-h-[510px] ">
         <div className="overflow-x-auto " style={{ 'scrollbarWidth': 'thin' }}>
 
           <table className="w-full text-sm text-left text-gray-500 ">

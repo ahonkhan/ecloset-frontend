@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DefaultWrapper from '../../../public/shared/components/wrappers/DefaultWrapper'
 import { PageAnimation } from '../../../public/shared/components/page/PageAnimation'
 import LayoutDefault from '../../../public/shared/layout/LayoutDefault'
@@ -6,6 +6,11 @@ import ProfileSidebar from '../components/sidebar/ProfileSidebar'
 import { ProfileContext } from '../context/ProfileContext'
 
 const ProfileLayout = ({ children }) => {
+    document.title = "E-closet | Profile"
+
+    useState(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
         <ProfileContext>
             <LayoutDefault>
