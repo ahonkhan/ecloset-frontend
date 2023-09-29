@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MdChevronRight } from 'react-icons/md'
 export const InputCheckout = ({ type, placeholder }) => {
     return (
@@ -76,10 +76,13 @@ export const InputDefault = ({ type, placeholder }) => {
     )
 }
 
-export const SwitchDefault = () => {
+export const SwitchDefault = ({ setSwicthStatus, swichStatus, enabled }) => {
+    useEffect(() => {
+        setSwicthStatus(enabled);
+    }, [])
     return (
-        <button className="h-4 w-8 md:h-5 md:w-10 bg-slate-400 rounded-3xl">
-            <span className="block w-4 h-4 md:w-5 md:h-5 rounded-full bg-slate-200"></span>
+        <button onClick={() => setSwicthStatus(!swichStatus)} className={`h-4 w-8 md:h-5 md:w-10 ${enabled ? 'bg-LightBlue bg-opacity-70' : 'bg-slate-300'}  relative rounded-3xl`}>
+            <span className={`block scale-125 duration-300 ${enabled ? 'translate-x-full -translate-y-1/2 bg-darkBlue shadow-2' : '-translate-y-1/2 bg-slate-400'}  top-1/2 md:mt-[0.5px]  left-0 absolute w-4 h-4 md:w-5 md:h-5 rounded-full `}></span>
         </button>
     )
 }
