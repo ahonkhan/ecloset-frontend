@@ -75,3 +75,11 @@ export const InputDefault = ({ type, placeholder }) => {
         </div>
     )
 }
+
+export const SwitchDefault = () => {
+    return (
+        <button className="h-4 w-8 md:h-5 md:w-10 bg-slate-400 rounded-3xl">
+            <span className="block w-4 h-4 md:w-5 md:h-5 rounded-full bg-slate-200"></span>
+        </button>
+    )
+}

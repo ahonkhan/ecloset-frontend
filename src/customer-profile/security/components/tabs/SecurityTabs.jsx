@@ -4,6 +4,7 @@ import { BiChevronRight } from 'react-icons/bi'
 import PasswordWrapper from './PasswordWrapper';
 import ChangeEmail from './ChangeEmail';
 import { AnimatePresence, motion } from 'framer-motion';
+import TwoFactorWrapper from './TwoFactorWrapper';
 const SecurityTabs = () => {
     const list = [
         {
@@ -16,7 +17,7 @@ const SecurityTabs = () => {
         },
         {
             'title': 'Two-Factor Authentication',
-            'wrapper': ''
+            'wrapper': <TwoFactorWrapper />
         },
     ]
     const [activeTab, setActiveTab] = useState(0);
