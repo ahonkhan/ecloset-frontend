@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import { ProductCard } from '../../../shared/components/cards/Card'
+import { ProductCard, ProductCardResponsive } from '../../../shared/components/cards/Card'
 
 const SimilerProducts = () => {
     return (
@@ -18,7 +18,7 @@ const SimilerProducts = () => {
                 spaceBetween={10}
                 navigation={true}
                 breakpoints={{
-                    480: {
+                    640: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
@@ -38,13 +38,14 @@ const SimilerProducts = () => {
                 modules={[Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+
 
             </Swiper>
         </section>

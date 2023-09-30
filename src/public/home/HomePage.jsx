@@ -9,7 +9,6 @@ import { motion } from 'framer-motion'
 const HomePage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = 'E-closet | The Biggest Ecommerce Platform'
     }, [])
     return (
 

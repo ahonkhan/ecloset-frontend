@@ -10,6 +10,7 @@ import CheckoutPage from "../public/checkout/CheckoutPage";
 import HomePage from "../public/home/HomePage";
 import ProductDetailsPage from "../public/product-details/ProductDetailsPage";
 import SearchPage from "../public/search/SearchPage";
+import ShopDetailsPage from "../public/shop-details/ShopDetailsPage";
 
 export {
     HomePage,
@@ -24,6 +25,7 @@ export {
     ProfileRefundsPage,
     ProfileAddressPage,
     ProfileSecurityPage,
+    ShopDetailsPage
 
 
 }

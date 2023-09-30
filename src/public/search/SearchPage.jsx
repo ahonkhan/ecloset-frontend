@@ -9,7 +9,6 @@ import { SearchContext } from './context/SearchContext'
 const SearchPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = 'E-closet | Electronics Headphones'
 
     }, [])
     return (

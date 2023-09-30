@@ -5,6 +5,7 @@ import { ButtonAddToCart, ButtonHeart } from '../buttons/Buttons'
 import ImageWrapper from '../imagewrapper/ImageWrapper'
 import company from '../../assets/company.jpg'
 import { Link } from 'react-router-dom'
+import { BsChatRightTextFill } from 'react-icons/bs'
 const ProductInfoWrapper = () => {
     return (
         <div className='site-container mt-8 flex gap-8  flex-col md:flex-row'>
@@ -107,15 +108,20 @@ const ProductInfoWrapper = () => {
                 </div>
                 <div className="seller-info-area mt-4">
                     <div className="seller-info-wrapper flex items-center gap-4">
-                        <Link to="/shop" className="">
-                            <img className='w-12 h-12 rounded-full' src={company} alt="" />
+                        <Link to="/stores/samsung.512.bd/?tab=products" className="shrink-0">
+                            <img className='w-10 sm:w-12 h-10 sm:h-12 rounded-full' src={company} alt="" />
                         </Link>
                         <div className="">
-                            <Link to={'/shop'} className='font-WorkSans text-gray-800 font-medium'>SamSung</Link>
+                            <Link to={'/stores/samsung.512.bd/?tab=profile'} className='font-WorkSans text-gray-800 font-medium'>SamSung</Link>
                             <p className='font-WorkSans text-sm text-gray-600 font-medium'>(451) Rating</p>
 
                         </div>
-                        <Link to={'/profile/inbox?chat=ecloset.samsung'} className='px-4 py-2 rounded-sm bg-GreenLight font-WorkSans text-white'>Send Message</Link>
+                        <Link to={'/profile/inbox?chat=ecloset.samsung'} className='px-4 py-2 rounded-sm bg-GreenLight font-WorkSans  text-white'>
+                            <span className='hidden sm:block'>Send Message</span>
+                            <span>
+                                <BsChatRightTextFill />
+                            </span>
+                        </Link>
                     </div>
                 </div>
             </div>

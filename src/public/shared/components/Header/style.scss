@@ -1,0 +1,6 @@
+.DesktopMenuLink {
+    &.active {
+        @apply text-Green bg-opacity-40 bg-GreenLight;
+
+    }
+}

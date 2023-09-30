@@ -6,6 +6,8 @@ export const GetSharedContext = createContext();
 export const SharedContext = ({ children }) => {
     const [desktopSidebarStatus, SetDesktopSidebarStatus] = useState(false);
     const [mobileSidebarStatus, setMobileSidebarStatus] = useState(false);
+
+
     const Categories = [
         { 'name': "Women's & Girls' Fashion", 'slug': 'girls-fashion', 'icon': <AiOutlineWoman /> },
         { 'name': 'Health & body', 'slug': 'health-and-body', 'icon': <AiOutlineMedicineBox /> },
@@ -126,10 +128,10 @@ export const SharedContext = ({ children }) => {
         { 'name': "Automotive & Motorbike", 'slug': "", 'icon': <MdElectricBike /> },
     ]
     const menu = [
-        { name: 'Donates', path: '' },
-        { name: 'Stores', path: '' },
-        { name: 'Events', path: '' },
-        { name: 'Contact us', path: '' },
+        { name: 'Donates', path: '/donates' },
+        { name: 'Stores', path: '/stores' },
+        { name: 'Events', path: '/events' },
+        { name: 'Contact us', path: '/contact-us' },
 
     ]
     const productTags = [

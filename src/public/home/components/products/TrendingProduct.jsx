@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionTitle } from '../../../shared/components/typography/Typography'
-import { ProductCard } from '../../../shared/components/cards/Card'
+import { ProductCard, ProductCardResponsive } from '../../../shared/components/cards/Card'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -23,7 +23,7 @@ const TrendingProduct = () => {
                 spaceBetween={10}
                 navigation={true}
                 breakpoints={{
-                    480: {
+                    640: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
@@ -43,13 +43,13 @@ const TrendingProduct = () => {
                 modules={[Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
-                <SwiperSlide><ProductCard /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
+                <SwiperSlide><ProductCardResponsive /></SwiperSlide>
 
             </Swiper>
         </section>

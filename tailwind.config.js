@@ -6,14 +6,14 @@ export default {
   ],
   theme: {
     // screens: {
-    //   'sm': '370px',
+    //   // 'sm': '520px',
     //   // => @media (min-width: 576px) { ... }
 
-    //   'md': '960px',
-    //   // => @media (min-width: 960px) { ... }
+    //   // 'md': '960px',
+    //   // // => @media (min-width: 960px) { ... }
 
-    //   'lg': '1440px',
-    //   // => @media (min-width: 1440px) { ... }
+    //   // 'lg': '1440px',
+    //   // // => @media (min-width: 1440px) { ... }
     // },
     extend: {
       screens: {

@@ -7,7 +7,6 @@ import { PageAnimation } from '../shared/components/page/PageAnimation'
 const CartPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = 'E-closet | My Cart'
 
     }, [])
     return (

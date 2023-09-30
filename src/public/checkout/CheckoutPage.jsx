@@ -8,7 +8,6 @@ import CheckoutRight from './components/checkoutRight/CheckoutRight'
 const CheckoutPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        document.title = 'E-closet | Checkout'
 
     }, [])
 

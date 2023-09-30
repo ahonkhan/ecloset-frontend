@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
 import style from './navbar.module.scss';
+import './style.scss';
 import LogoGreen from '../../assets/LogoGreen';
 import { MdOutlineSupportAgent, MdSearch, MdShoppingCart } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
 import { ImCart } from 'react-icons/im';
 import { GetSharedContext } from '../../context/Context';
@@ -19,7 +20,7 @@ export const DesktopMenu = () => {
                 </button>
                 {
                     context.menu?.map(item =>
-                        <Link to={item.path} className='px-4 text-gray-700 rounded-3xl duration-300 hover:text-Green hover:bg-opacity-40 hover:bg-GreenLight py-2  font-Poppins text-[15px] tracking-wide font-medium'>{item.name}</Link>
+                        <NavLink to={item.path} className='px-4 DesktopMenuLink text-gray-700 rounded-3xl duration-300 hover:text-Green hover:bg-opacity-40 hover:bg-GreenLight py-2  font-Poppins text-[15px] tracking-wide font-medium'>{item.name}</NavLink>
                     )
                 }
             </div>
