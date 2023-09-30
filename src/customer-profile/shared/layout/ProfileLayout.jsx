@@ -6,7 +6,6 @@ import ProfileSidebar from '../components/sidebar/ProfileSidebar'
 import { ProfileContext } from '../context/ProfileContext'
 
 const ProfileLayout = ({ children }) => {
-    document.title = "E-closet | Profile"
 
     useState(() => {
         window.scrollTo(0, 0);
