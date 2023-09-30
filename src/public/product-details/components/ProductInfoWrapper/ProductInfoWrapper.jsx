@@ -118,7 +118,7 @@ const ProductInfoWrapper = () => {
                         </div>
                         <Link to={'/profile/inbox?chat=ecloset.samsung'} className='px-4 py-2 rounded-sm bg-GreenLight font-WorkSans  text-white'>
                             <span className='hidden sm:block'>Send Message</span>
-                            <span>
+                            <span className='sm:hidden'>
                                 <BsChatRightTextFill />
                             </span>
                         </Link>
