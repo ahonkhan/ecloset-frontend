@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
+import { PageAnimation, PageAnimationProfile } from '../../public/shared/components/page/PageAnimation'
 import { MdAdd, MdAddShoppingCart, MdChevronLeft, MdChevronRight, MdRemove } from 'react-icons/md'
 import img from './assets/image.png'
 import { Link } from 'react-router-dom'
@@ -10,7 +10,7 @@ const WishlistPage = () => {
 
     }, [])
     return (
-        <PageAnimation>
+        <PageAnimationProfile>
             <div className="min-h-[510px]">
                 <div className="overflow-x-auto" style={{ 'scrollbarWidth': 'thin' }}>
 
@@ -79,7 +79,7 @@ const WishlistPage = () => {
                     </div>
                 </div>
             </div>
-        </PageAnimation>
+        </PageAnimationProfile>
     )
 }
 

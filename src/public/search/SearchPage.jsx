@@ -6,22 +6,26 @@ import ProductWrapper from './components/wrapper/ProductWrapper'
 import { SharedContext } from '../shared/context/Context'
 import SearchBreadCrumb from './components/breadcrumb/SearchBreadCrumb'
 import { SearchContext } from './context/SearchContext'
+import LoadingPage from '../shared/components/page/LoadingPage'
+import { PageAnimation } from '../shared/components/page/PageAnimation'
 const SearchPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
 
     }, [])
     return (
-        <SharedContext>
-            <SearchContext>
-                <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                    <DefaultWrapper>
-                        <SearchBreadCrumb />
-                        <ProductWrapper />
-                    </DefaultWrapper >
-                </motion.section >
-            </SearchContext>
-        </SharedContext>
+        <>
+            <SharedContext>
+                <SearchContext>
+                    <PageAnimation>
+                        <DefaultWrapper>
+                            <SearchBreadCrumb />
+                            <ProductWrapper />
+                        </DefaultWrapper >
+                    </PageAnimation>
+
+                </SearchContext>
+            </SharedContext></>
     )
 }
 

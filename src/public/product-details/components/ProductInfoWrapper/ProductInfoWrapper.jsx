@@ -10,8 +10,8 @@ const ProductInfoWrapper = () => {
     return (
         <div className='site-container mt-8 flex gap-8  flex-col md:flex-row'>
             <ImageWrapper />
-            <div className="content-wrapper h-fit w-full bg-white px-4 py-8 rounded">
-                <h1 className="title text-2xl font-WorkSans text-gray-800">Black Short Tops</h1>
+            <div className="content-wrapper h-fit w-full bg-white px-4 py-4 rounded">
+                <h1 className="title text-lg lg:text-2xl font-WorkSans text-gray-800">Black Short Tops</h1>
                 <div className="rating flex items-center gap-1">
                     <MdStar className='text-YellowDark' />
                     <MdStar className='text-YellowDark' />
@@ -24,7 +24,7 @@ const ProductInfoWrapper = () => {
                     <p className='text-sm text-darkBlue font-WorkSans'>50 In Stock</p>
                 </div>
                 <div className="short-desc mt-2 tracking-tight">
-                    <p className='text-base text-DarkGray font-WorkSans'>Masha Allah Alhamdulillah ,,, NHB SHOP Kurtis are made in Bangladesh. We cater to all needs at low prices. If you want to buy a new dress at low price then this dress is for you Girls of any age with slim body can wear it  Our clothes are available up to 40 body. Follow our store, stay with us and buy new dresses</p>
+                    <p className='text-sm md:text-base text-DarkGray font-WorkSans'>Masha Allah Alhamdulillah ,,, NHB SHOP Kurtis are made in Bangladesh. We cater to all needs at low prices. If you want to buy a new dress at low price then this dress is for you Girls of any age with slim body can wear it  Our clothes are available up to 40 body. Follow our store, stay with us and buy new dresses</p>
                 </div>
                 <div className="control mt-4  flex items-start flex-col sm:flex-row md:flex-col lg:flex-row gap-4">
                     <div className="quantity flex border border-gray-200 px-4 py-2 rounded w-fit">

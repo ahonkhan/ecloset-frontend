@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
+import { PageAnimation, PageAnimationProfile } from '../../public/shared/components/page/PageAnimation'
 import { Link } from 'react-router-dom';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
@@ -10,7 +10,7 @@ const ProfileOrderPage = () => {
 
     }, [])
     return (
-        <PageAnimation>
+        <PageAnimationProfile>
             <div className="min-h-[510px]">
 
                 <div className="overflow-x-auto " style={{ 'scrollbarWidth': 'thin' }}>
@@ -79,7 +79,7 @@ const ProfileOrderPage = () => {
                     </div>
                 </div>
             </div>
-        </PageAnimation>
+        </PageAnimationProfile>
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
+import { PageAnimation, PageAnimationProfile } from '../../public/shared/components/page/PageAnimation'
 
 import ReviewItem from './components/review-item/ReviewItem'
 const MyReviewsPage = () => {
@@ -8,7 +8,7 @@ const MyReviewsPage = () => {
 
     }, [])
     return (
-        <PageAnimation>
+        <PageAnimationProfile>
             <div className="min-h-[510px]">
                 {
                     [...new Array(6)].map(item =>
@@ -16,7 +16,7 @@ const MyReviewsPage = () => {
                     )
                 }
             </div>
-        </PageAnimation>
+        </PageAnimationProfile>
     )
 }
 

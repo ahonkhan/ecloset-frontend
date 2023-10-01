@@ -11,13 +11,15 @@ const CartPage = () => {
     }, [])
     return (
 
-        <PageAnimation>
-            <DefaultWrapper>
-                <Breadcrumb />
-                <CartProducts />
-                <CartTotal />
-            </DefaultWrapper>
-        </PageAnimation>
+        <>
+            <PageAnimation>
+                <DefaultWrapper>
+                    <Breadcrumb />
+                    <CartProducts />
+                    <CartTotal />
+                </DefaultWrapper>
+            </PageAnimation>
+        </>
 
     )
 }

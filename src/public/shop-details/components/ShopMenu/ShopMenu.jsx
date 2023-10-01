@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ShopMenu = ({ setActiveMenu, activeMenu }) => {
     const menus = [
         { name: 'Products', tab: 'products' },
-        { name: 'Profile', tab: 'profile' },
+        { name: 'Overview', tab: 'overview' },
         { name: 'Events', tab: 'events' },
     ];
     return (

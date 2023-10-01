@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
+import { PageAnimation, PageAnimationProfile } from '../../public/shared/components/page/PageAnimation'
 import { BsPlusLg } from 'react-icons/bs'
 import { BiShow } from 'react-icons/bi'
 import { MdOutlineDeleteOutline } from 'react-icons/md'
@@ -16,7 +16,7 @@ const ProfileAddressPage = () => {
 
     return (
         <>
-            <PageAnimation>
+            <PageAnimationProfile>
                 <div className="wrapper min-h-[510px] profile-container">
                     <div className="header flex justify-between items-center font-WorkSans">
                         <p className='profile-title'>Address Book</p>
@@ -31,7 +31,7 @@ const ProfileAddressPage = () => {
 
                 </div>
 
-            </PageAnimation>
+            </PageAnimationProfile>
             <AnimatePresence>
                 {
                     modalStatus && (

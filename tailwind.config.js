@@ -42,6 +42,7 @@ export default {
         'WorkSans': ['Work Sans'],
         'Poppins': ['Poppins'],
         'Ubuntu': ['Ubuntu'],
+        'Exo': ['Exo'],
 
       }
     },

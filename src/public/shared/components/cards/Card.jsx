@@ -4,6 +4,7 @@ import style from './card.module.scss';
 import { ImStarFull, ImStarHalf } from 'react-icons/im'
 import { FaCartPlus } from 'react-icons/fa6'
 import { AiFillEye, AiOutlineEye, AiOutlineHeart } from 'react-icons/ai'
+import { RatingStar } from '../../../search/components/typography/Typography';
 export const ProductCard = () => {
     return (
         <div className={`product-card xs:max-w-[100%]  ${style.ProductCardStyle} bg-white rounded-[10px] pb-2.5`}>
@@ -99,6 +100,43 @@ export const ProductCardResponsive = () => {
                     </button>
                 </div>
             </div>
+        </div>
+    )
+}
+
+export const ReviewCard = ({ img }) => {
+    return (
+        <div className="review-item cursor-pointer flex gap-4 border-b pb-4">
+            <div className="profile shrink-0">
+                <img className='w-[80px] h-[80px] object-cover object-top rounded-full ' src={img} alt="" />
+            </div>
+            <div className="review-content">
+                <p className="date text-DarkGray text-sm font-WorkSans">28 Feb, 2022</p>
+                <div className="flex justify-between">
+                    <p className="username text-Green font-medium font-Ubuntu">Olga Devidson</p>
+                    <p className="rating">
+                        <RatingStar count={5} />
+                    </p>
+                </div>
+                <p className='text-DarkGray font-WorkSans tracking-tight mt-2 text-sm'>
+                    Ut wisi enim ad minim veniam, quis laore nostrud exerci tation ulm hedi corper turet ipsum dolor sit amet, consectetu Maecenas dignissim orci quis odio egestas, vitae interdum urna sagittis.
+                </p>
+            </div>
+        </div>
+    )
+}
+
+
+export const EventCard = () => {
+    return (
+        <div className='event-card text-center font-WorkSans'>
+            <h2 className="eventCardTitle text-LightBlue text-2xl">2023 quiz to get one Laptop</h2>
+            <p className='date text-gray-500'>Sunday,1 October 2023</p>
+            <p className="disc italic text-gray-700 text-sm font-Exo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas ipsam nam quo beatae minus recusandae harum repellendus quibusdam ullam!
+
+            </p>
+            <Link to={'/events/12445214/'}>Learn more</Link>
         </div>
     )
 }

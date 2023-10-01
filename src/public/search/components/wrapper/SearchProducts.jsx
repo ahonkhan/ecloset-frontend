@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
-import { ProductCard } from '../../../shared/components/cards/Card'
+import { ProductCard, ProductCardResponsive } from '../../../shared/components/cards/Card'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 const SearchProducts = () => {
     const [page, setPage] = useState(1);
     return (
         <>
-            <div className="products grid gap-y-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-x-4 lg:grid-cols-3 xl:grid-cols-4">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+            <div className="products grid gap-y-4 grid-cols-1 xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-2 gap-x-4 lg:grid-cols-3 xl:grid-cols-4">
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
+                <ProductCardResponsive />
             </div>
 
             <div className="flex justify-center mt-6 gap-2">

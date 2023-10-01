@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import ProductWrapper from './components/wrappers/ProductWrapper'
 import { useSearchParams } from 'react-router-dom'
 import ProfileWrapper from './components/wrappers/ProfileWrapper'
+import EventWrapper from './components/wrappers/EventWrapper'
+import LoadingPage from '../shared/components/page/LoadingPage'
 
 const ShopDetailsPage = () => {
     useEffect(() => {
@@ -20,7 +22,7 @@ const ShopDetailsPage = () => {
             case 'products':
                 setActiveMenu(0);
                 break;
-            case 'profile':
+            case 'overview':
                 setActiveMenu(1);
                 break;
             case 'events':
@@ -33,34 +35,46 @@ const ShopDetailsPage = () => {
         }
     }, [])
     return (
-        <PageAnimation>
-            <DefaultWrapper>
-                <ShopHeader />
-                <ShopMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
-                <section className="site-container py-4">
-                    <AnimatePresence>
-                        {
-                            activeMenu === 0 && (
-                                <motion.div style={{ 'overflow': 'clip' }} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-                                    <ProductWrapper />
-                                </motion.div>
+        <>
+            <PageAnimation>
+                <DefaultWrapper>
+                    <ShopHeader />
+                    <ShopMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+                    <section className="site-container py-4">
+                        <AnimatePresence>
+                            {
+                                activeMenu === 0 && (
+                                    <motion.div style={{ 'overflow': 'clip' }} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+                                        <ProductWrapper />
+                                    </motion.div>
 
-                            )
-                        }
-                    </AnimatePresence>
-                    <AnimatePresence>
-                        {
-                            activeMenu === 1 && (
-                                <motion.div style={{ 'overflow': 'clip' }} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
-                                    <ProfileWrapper />
-                                </motion.div>
+                                )
+                            }
+                        </AnimatePresence>
+                        <AnimatePresence>
+                            {
+                                activeMenu === 1 && (
+                                    <motion.div style={{ 'overflow': 'clip' }} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+                                        <ProfileWrapper />
+                                    </motion.div>
 
-                            )
-                        }
-                    </AnimatePresence>
-                </section>
-            </DefaultWrapper>
-        </PageAnimation>
+                                )
+                            }
+                        </AnimatePresence>
+                        <AnimatePresence>
+                            {
+                                activeMenu === 2 && (
+                                    <motion.div style={{ 'overflow': 'clip' }} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}>
+                                        <EventWrapper />
+                                    </motion.div>
+
+                                )
+                            }
+                        </AnimatePresence>
+                    </section>
+                </DefaultWrapper>
+            </PageAnimation>
+        </>
     )
 }
 

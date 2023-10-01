@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { PageAnimation } from '../../public/shared/components/page/PageAnimation'
+import { PageAnimation, PageAnimationProfile } from '../../public/shared/components/page/PageAnimation'
 import profile from './assets/profile.jpg'
 import { AiOutlineCamera, AiOutlineCheck } from 'react-icons/ai'
 import { MdCameraAlt, MdClose } from 'react-icons/md'
@@ -13,7 +13,7 @@ const ProfileHomePage = () => {
 
     }, [])
     return (
-        <PageAnimation>
+        <PageAnimationProfile>
             <div className="wrapper">
                 <div className="flex items-center justify-center">
                     <div className="profile-wrapper relative  w-[100px] h-[100px] md:w-[150px] md:h-[150px] border-4 border-LightBlue shadow-1  rounded-full">
@@ -85,7 +85,7 @@ const ProfileHomePage = () => {
 
                 </div>
             </div>
-        </PageAnimation >
+        </PageAnimationProfile >
     )
 }
 
