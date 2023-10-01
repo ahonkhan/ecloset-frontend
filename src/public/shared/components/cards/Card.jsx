@@ -129,14 +129,14 @@ export const ReviewCard = ({ img }) => {
 
 export const EventCard = () => {
     return (
-        <div className='event-card text-center font-WorkSans'>
-            <h2 className="eventCardTitle text-LightBlue text-2xl">2023 quiz to get one Laptop</h2>
-            <p className='date text-gray-500'>Sunday,1 October 2023</p>
-            <p className="disc italic text-gray-700 text-sm font-Exo">
+        <div className='event-card text-center bg-slate-100 px-4 py-6 select-none rounded font-WorkSans'>
+            <h2 className="eventCardTitle text-LightBlue text-2xl font-medium">2023 quiz to get one Laptop</h2>
+            <p className='date my-1 text-gray-500'>Sunday,1 October 2023</p>
+            <p className="disc  italic text-gray-600 text-sm font-Exo">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptas ipsam nam quo beatae minus recusandae harum repellendus quibusdam ullam!
 
             </p>
-            <Link to={'/events/12445214/'}>Learn more</Link>
+            <Link to={'/events/12445214/'} className='text-blue-500 text-sm'>Learn more</Link>
         </div>
     )
 }

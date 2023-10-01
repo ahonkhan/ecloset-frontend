@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import LoadingPage from "./LoadingPage"
+import DefaultWrapper from "../wrappers/DefaultWrapper"
 export const PageAnimation = ({ children }) => {
     return (
         <>
@@ -19,3 +20,4 @@ export const PageAnimationProfile = ({ children }) => {
         </>
     )
 }
+

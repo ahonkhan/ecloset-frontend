@@ -9,6 +9,8 @@ import { GlobalContext } from './context/GlobalContext';
 import Redirect from './routes/redirect/Redirect';
 import { ButtonBackToTop } from './public/shared/components/button/Button';
 import LoadingPage from './public/shared/components/page/LoadingPage';
+import { PageAnimation } from './public/shared/components/page/PageAnimation';
+import PageNotFound from './public/shared/components/page/PageNotFound';
 const App = () => {
   return (
 
@@ -19,7 +21,7 @@ const App = () => {
         <Route path='/' element={<LayoutDefault><HomePage /></LayoutDefault>} />
         <Route path='/search' element={<LayoutDefault><SearchPage /></LayoutDefault>} />
         <Route path='/products/:slug' element={<LayoutDefault><ProductDetailsPage /></LayoutDefault>} />
-        <Route path='/stores' element={<LayoutDefault> <LoadingPage /> <h1>All store lists for all store <Link to={'/stores/samsung.120/'}>Samsung</Link> </h1></LayoutDefault>} />
+        <Route path='/stores' element={<LayoutDefault><PageAnimation><h1>All store lists for all store <Link to={'/stores/samsung.120/'}>Samsung</Link> </h1></PageAnimation></LayoutDefault>} />
         <Route path='/stores/:id/' element={<LayoutDefault><ShopDetailsPage /></LayoutDefault>} />
         <Route path='/cart' element={<LayoutDefault><CartPage /></LayoutDefault>} />
         <Route path='/checkout' element={<LayoutDefault><CheckoutPage /></LayoutDefault>} />
@@ -36,7 +38,7 @@ const App = () => {
         <Route path='/profile/settings' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
 
         {/* profile end */}
-        <Route path='*' element={<div className='h-screen flex items-center justify-center text-[100px]'>404</div>} />
+        <Route path='*' element={<LayoutDefault><PageNotFound /></LayoutDefault>} />
       </Routes>
     </GlobalContext>
 
