@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import SearchProducts from './SearchProducts'
 import SearchFilter from './SearchFilter'
 import { AiOutlineArrowRight, AiOutlineClose } from 'react-icons/ai';
@@ -7,6 +7,10 @@ import { GetSearchContext } from '../../context/SearchContext';
 
 const ProductWrapper = () => {
     const context = useContext(GetSearchContext)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+
+    }, [])
     return (
         <>
 

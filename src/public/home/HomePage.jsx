@@ -16,7 +16,7 @@ const HomePage = () => {
 
     return (
 
-        <>
+   
             <PageAnimation>
                 <DefaultWrapper>
                     <Hero />
@@ -25,7 +25,6 @@ const HomePage = () => {
 
                 </DefaultWrapper>
             </PageAnimation>
-        </>
 
 
     )

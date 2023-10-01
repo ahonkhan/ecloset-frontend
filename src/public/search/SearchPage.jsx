@@ -14,18 +14,20 @@ const SearchPage = () => {
 
     }, [])
     return (
-        <>
+        <PageAnimation>
             <SharedContext>
                 <SearchContext>
-                    <PageAnimation>
-                        <DefaultWrapper>
-                            <SearchBreadCrumb />
-                            <ProductWrapper />
-                        </DefaultWrapper >
-                    </PageAnimation>
+
+                    <DefaultWrapper>
+                        <SearchBreadCrumb />
+                        <ProductWrapper />
+                    </DefaultWrapper >
+
 
                 </SearchContext>
-            </SharedContext></>
+            </SharedContext>
+        </PageAnimation>
+
     )
 }
 
