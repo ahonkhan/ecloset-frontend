@@ -3,7 +3,7 @@ import style from './navbar.module.scss';
 import './style.scss';
 import LogoGreen from '../../assets/LogoGreen';
 import { MdOutlineSupportAgent, MdSearch, MdShoppingCart } from 'react-icons/md';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
 import { ImCart } from 'react-icons/im';
 import { GetSharedContext } from '../../context/Context';
@@ -48,15 +48,26 @@ export const DesktopMenu = () => {
 
 export const MobileMenu = () => {
     const [IsLoading, setIsLoading] = useState(false);
+    const [searchValue, setSearchValue] = useState('');
+    const navigate = useNavigate()
+    const searchHandler = () => {
+        window.scrollTo(0, 0);
 
+        if (searchValue) {
+            navigate('/search?q=' + searchValue);
+            setSearchValue('');
+
+        }
+
+    }
     return (
         <menu className={`flex ${style.HeaderPaddingMobile} gap-2 justify-center bg-GreenLight py-2 bg-opacity-30`}>
-            <div className="search-bar bg-white  flex justify-between rounded-3xl items-center w-full h-[40px] md:h-[44px] px-1">
-                <input type="text" className='w-full font-Ubuntu bg-transparent border-none outline-none pl-3  text-[15px] text-gray-400 font-normal' placeholder='Search for product..' />
-                <button className='shrink-0 w-[36px] hover:bg-GreenLight duration-200 text-2xl text-white h-[36px] bg-Green rounded-full flex items-center justify-center'>
+            <form onSubmit={(e) => { e.preventDefault(); searchHandler() }} className="search-bar bg-white  flex justify-between rounded-3xl items-center w-full h-[40px] md:h-[44px] px-1">
+                <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} type="text" className='w-full font-Ubuntu bg-transparent border-none outline-none pl-3  text-[15px] text-gray-400 font-normal' placeholder='Search for product..' />
+                <button type='submit' className='shrink-0 w-[36px] hover:bg-GreenLight duration-200 text-2xl text-white h-[36px] bg-Green rounded-full flex items-center justify-center'>
                     <MdSearch className={`${IsLoading ? style.pulse : ''}`} />
                 </button>
-            </div>
+            </form>
 
             <div className="flex items-center gap-2">
 
