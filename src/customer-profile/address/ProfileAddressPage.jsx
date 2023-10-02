@@ -6,10 +6,8 @@ import { MdOutlineDeleteOutline } from 'react-icons/md'
 import AddressItem from './components/address-item/AddressItem'
 import AddressModal from './components/address-item/AddressModal'
 import { AnimatePresence, motion } from 'framer-motion'
-import { GetGlobalContext } from '../../context/GlobalContext'
 const ProfileAddressPage = () => {
     const [modalStatus, setModalStatus] = useState(false)
-    const GlobalContext = useContext(GetGlobalContext)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -20,7 +18,8 @@ const ProfileAddressPage = () => {
                 <div className="wrapper min-h-[510px] profile-container">
                     <div className="header flex justify-between items-center font-WorkSans">
                         <p className='profile-title'>Address Book</p>
-                        <button onClick={() => { setModalStatus(true); GlobalContext.setModalOpenStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className='flex rounded items-center duration-300 group justify-center px-4 py-2 gap-2 bg-GreenLight text-white'>
+
+                        <button onClick={() => { setModalStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className='flex rounded items-center duration-300 group justify-center px-4 py-2 gap-2 bg-GreenLight text-white'>
                             <span>Add new</span>
                             <span className='w-6 h-6 bg-Green flex items-center duration-300 group-active:scale-95 justify-center rounded-full bg-opacity-40'> <BsPlusLg className='text-white' /> </span>
                         </button>
@@ -35,9 +34,7 @@ const ProfileAddressPage = () => {
             <AnimatePresence>
                 {
                     modalStatus && (
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                            <AddressModal setModalStatus={setModalStatus} modalStatus={modalStatus} />
-                        </motion.div>
+                        <AddressModal setModalStatus={setModalStatus} modalStatus={modalStatus} />
                     )
                 }
             </AnimatePresence>

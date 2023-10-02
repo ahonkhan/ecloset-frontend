@@ -2,10 +2,8 @@ import React, { useContext, useEffect } from 'react'
 import { InputDefault, SelectDefault } from '../../../shared/components/input-fields/InputField'
 import { IoMdAdd } from 'react-icons/io'
 import { MdOutlineCancel } from 'react-icons/md'
-import { GetGlobalContext } from '../../../../context/GlobalContext'
 import { DefaultModal } from '../../../../public/shared/components/modals/DefaultModal'
 const AddressModal = ({ setModalStatus, modalStatus }) => {
-    const globalContext = useContext(GetGlobalContext)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -53,7 +51,7 @@ const AddressModal = ({ setModalStatus, modalStatus }) => {
 
             </form>
             <div className="modal-footer flex justify-end items-center mt-4 gap-4">
-                <button onClick={() => { setModalStatus(false); globalContext.setModalOpenStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='flex items-center gap-2 px-4 py-2 text-white rounded bg-rose-500'>
+                <button onClick={() => { setModalStatus(false); document.querySelector('body').classList.remove('overflow-hidden') }} className='flex items-center gap-2 px-4 py-2 text-white rounded bg-rose-500'>
                     <span>Cancel</span>
                     <span>
                         <MdOutlineCancel />
