@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, WishlistPage } from './routes/routes';
+import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, ShopPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
@@ -21,7 +21,7 @@ const App = () => {
         <Route path='/' element={<LayoutDefault><HomePage /></LayoutDefault>} />
         <Route path='/search' element={<LayoutDefault><SearchPage /></LayoutDefault>} />
         <Route path='/products/:slug' element={<LayoutDefault><ProductDetailsPage /></LayoutDefault>} />
-        <Route path='/stores' element={<LayoutDefault><PageAnimation><h1>All store lists for all store <Link to={'/stores/samsung.120/'}>Samsung</Link> </h1></PageAnimation></LayoutDefault>} />
+        <Route path='/stores' element={<LayoutDefault><ShopPage /></LayoutDefault>} />
         <Route path='/stores/:id/' element={<LayoutDefault><ShopDetailsPage /></LayoutDefault>} />
         <Route path='/cart' element={<LayoutDefault><CartPage /></LayoutDefault>} />
         <Route path='/checkout' element={<LayoutDefault><CheckoutPage /></LayoutDefault>} />

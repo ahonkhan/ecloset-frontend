@@ -12,19 +12,19 @@ const ProfileWrapperInfo = () => {
                 <ul className='h-full flex gap-0.5 flex-col justify-center'>
                     <li className='profileWrapperList'>
                         <h2 className='profileWrapperListTitle'>Total Products</h2>
-                        <p className='shrink-0 lg:font-medium text-slate-500'>1.5k</p>
+                        <p className='shrink-0  text-slate-500'>1.5k</p>
                     </li>
                     <li className='profileWrapperList'>
                         <h2 className='profileWrapperListTitle'>Total Reviews</h2>
-                        <p className='shrink-0 lg:font-medium text-slate-500'>4k</p>
+                        <p className='shrink-0  text-slate-500'>4k</p>
                     </li>
                     <li className='profileWrapperList'>
                         <h2 className='profileWrapperListTitle'>Location</h2>
-                        <p className='shrink-0 lg:font-medium text-slate-500'>Dhaka,Bangladesh</p>
+                        <p className='shrink-0  text-slate-500'>Dhaka,Bangladesh</p>
                     </li>
                     <li className='profileWrapperList'>
                         <h2 className='profileWrapperListTitle'>Joined On</h2>
-                        <p className='shrink-0 lg:font-medium text-slate-500'>May 4,2017</p>
+                        <p className='shrink-0  text-slate-500'>May 4,2017</p>
                     </li>
                 </ul>
             </div>

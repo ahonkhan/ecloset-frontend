@@ -20,7 +20,7 @@ const PageNotFound = () => {
                                 <p class="box__description-text py-2 text-base md:text-lg text-gray-700">It seems like we couldn't find the page you were looking for</p>
                             </div>
 
-                            <Link to={'/'} className='px-6 py-2 w-fit rounded-full bg-blue-500 ring-offset-1 text-white focus:ring-1'>Back</Link>
+                            <Link to={'/'} className='px-6 py-2 w-fit rounded-full bg-blue-500 ring-offset-1 text-white focus:ring-1'>Back to Home</Link>
                         </div>
 
                     </div>

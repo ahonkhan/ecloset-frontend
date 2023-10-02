@@ -1,8 +1,8 @@
 .profileWrapperList {
-    @apply flex items-center justify-between px-4 py-1.5 bg-slate-300;
+    @apply flex items-center justify-between px-4 py-1.5 bg-slate-100;
 
     .profileWrapperListTitle {
-        @apply md:text-base shrink-0 lg:font-medium text-slate-800;
+        @apply md:text-base shrink-0  text-slate-800;
 
     }
 

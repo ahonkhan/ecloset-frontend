@@ -8,7 +8,6 @@ import ProductWrapper from './components/wrappers/ProductWrapper'
 import { useSearchParams } from 'react-router-dom'
 import ProfileWrapper from './components/wrappers/ProfileWrapper'
 import EventWrapper from './components/wrappers/EventWrapper'
-import LoadingPage from '../shared/components/page/LoadingPage'
 
 const ShopDetailsPage = () => {
     useEffect(() => {
