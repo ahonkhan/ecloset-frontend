@@ -12,7 +12,7 @@ const ProductViewModal = ({ modalStatus, setModalStatus }) => {
             <div className="flex h-full flex-col lg:flex-row">
 
 
-                <div className="w-full md:h-full h-auto bg-red-500">
+                <div className="w-full md:h-full h-auto">
                     <img className='w-full h-full object-cover' src={productPhoto} alt="" />
 
                 </div>
