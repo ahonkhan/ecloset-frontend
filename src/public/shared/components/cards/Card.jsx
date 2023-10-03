@@ -8,6 +8,7 @@ import { RatingStar } from '../../../search/components/typography/Typography';
 import { useContext, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ProductViewModal from '../modals/ProductViewModal';
+import { GetGlobalContext } from '../../../../context/GlobalContext';
 export const ProductCard = () => {
     return (
         <div className={`product-card xs:max-w-[100%]  ${style.ProductCardStyle} bg-white rounded-[10px] pb-2.5`}>
@@ -51,7 +52,8 @@ export const ProductCard = () => {
 }
 
 export const ProductCardResponsive = () => {
-    const [modalStatus, setModalStatus] = useState(false)
+    const [modalStatus, setModalStatus] = useState(false);
+    const globalcontext = useContext(GetGlobalContext)
     return (
         <>
 
@@ -67,7 +69,7 @@ export const ProductCardResponsive = () => {
 
                         </div>
                         <div className="overlay-bottom overflow-hidden w-full flex items-center justify-center">
-                            <button className={`${style.FadeUp} bg-White px-4 rounded-md text-Green font-Roboto text-sm font-medium py-2 w-full`}>Add to cart</button>
+                            <button onClick={() => { globalcontext.setCartSideStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className={`${style.FadeUp} bg-White px-4 rounded-md text-Green font-Roboto text-sm font-medium py-2 w-full`}>Add to cart</button>
                         </div>
                     </div>
                 </div>
@@ -101,7 +103,7 @@ export const ProductCardResponsive = () => {
                         <button className={`${style.cartFooterButton}`}>
                             <AiOutlineHeart />
                         </button>
-                        <button className={`${style.cartFooterButton}`}>
+                        <button onClick={() => { globalcontext.setCartSideStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className={`${style.cartFooterButton}`}>
                             <FaCartPlus />
                         </button>
                     </div>
@@ -119,6 +121,7 @@ export const ProductCardResponsive = () => {
 }
 
 export const ProductCardResponsiveModalLess = ({ modalStatus, setModalStatus }) => {
+    const globalcontext = useContext(GetGlobalContext)
     return (
 
         <div className={`product-card flex sm:block xs:max-w-[100%]  ${style.ProductCardStyle} bg-white rounded-[10px] sm:pb-2.5`}>
@@ -133,7 +136,7 @@ export const ProductCardResponsiveModalLess = ({ modalStatus, setModalStatus }) 
 
                     </div>
                     <div className="overlay-bottom overflow-hidden w-full flex items-center justify-center">
-                        <button className={`${style.FadeUp} bg-White px-4 rounded-md text-Green font-Roboto text-sm font-medium py-2 w-full`}>Add to cart</button>
+                        <button onClick={() => { globalcontext.setCartSideStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className={`${style.FadeUp} bg-White px-4 rounded-md text-Green font-Roboto text-sm font-medium py-2 w-full`}>Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -167,7 +170,7 @@ export const ProductCardResponsiveModalLess = ({ modalStatus, setModalStatus }) 
                     <button className={`${style.cartFooterButton}`}>
                         <AiOutlineHeart />
                     </button>
-                    <button className={`${style.cartFooterButton}`}>
+                    <button onClick={() => { globalcontext.setCartSideStatus(true); document.querySelector('body').classList.add('overflow-hidden') }} className={`${style.cartFooterButton}`}>
                         <FaCartPlus />
                     </button>
                 </div>

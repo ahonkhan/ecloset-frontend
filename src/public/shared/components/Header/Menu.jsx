@@ -7,10 +7,12 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
 import { ImCart } from 'react-icons/im';
 import { GetSharedContext } from '../../context/Context';
+import { GetGlobalContext } from '../../../../context/GlobalContext';
 // import 
 export const DesktopMenu = () => {
 
     const context = useContext(GetSharedContext);
+    const globalcontext = useContext(GetGlobalContext)
     return (
         <menu className={`flex ${style.HeaderPaddingDesktop} justify-between bg-GreenLight py-2 bg-opacity-30`}>
             <div className="flex items-center gap-4">
@@ -34,11 +36,11 @@ export const DesktopMenu = () => {
                     <AiOutlineHeart className='text-xl' />
                 </button>
                 <div className="flex items-center gap-2">
-                    <Link to={'/cart'}>
-                        <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
-                            <MdShoppingCart className='text-xl' />
-                        </button>
-                    </Link>
+
+                    <button onClick={() => { globalcontext.setCartSideStatus(true); document.body.classList.add('overflow-hidden') }} className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
+                        <MdShoppingCart className='text-xl' />
+                    </button>
+
                     <span className='font-Ubuntu font-medium text-gray-600'><span>৳ </span>0.00</span>
                 </div>
             </div>
@@ -49,6 +51,8 @@ export const DesktopMenu = () => {
 export const MobileMenu = () => {
     const [IsLoading, setIsLoading] = useState(false);
     const [searchValue, setSearchValue] = useState('');
+    const globalcontext = useContext(GetGlobalContext)
+
     const navigate = useNavigate()
     const searchHandler = () => {
         window.scrollTo(0, 0);
@@ -71,11 +75,11 @@ export const MobileMenu = () => {
 
             <div className="flex items-center gap-2">
 
-                <Link to={'/cart'}>
-                    <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
-                        <MdShoppingCart className='text-xl' />
-                    </button>
-                </Link>
+
+                <button onClick={() => { globalcontext.setCartSideStatus(true); document.body.classList.add('overflow-hidden') }} className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full text-white bg-GreenLight'>
+                    <MdShoppingCart className='text-xl' />
+                </button>
+
             </div>
         </menu>
     )

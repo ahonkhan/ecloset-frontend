@@ -11,12 +11,14 @@ import { ButtonBackToTop } from './public/shared/components/button/Button';
 import LoadingPage from './public/shared/components/page/LoadingPage';
 import { PageAnimation } from './public/shared/components/page/PageAnimation';
 import PageNotFound from './public/shared/components/page/PageNotFound';
+import CartSidebar from './public/shared/components/Sidebar/CartSidebar';
 const App = () => {
   return (
 
 
-    <GlobalContext>
+    <>
       <ButtonBackToTop />
+      <CartSidebar />
       <Routes>
         <Route path='/' element={<LayoutDefault><HomePage /></LayoutDefault>} />
         <Route path='/search' element={<LayoutDefault><SearchPage /></LayoutDefault>} />
@@ -40,7 +42,7 @@ const App = () => {
         {/* profile end */}
         <Route path='*' element={<LayoutDefault><PageNotFound /></LayoutDefault>} />
       </Routes>
-    </GlobalContext>
+    </>
 
   )
 }
