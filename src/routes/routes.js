@@ -1,4 +1,5 @@
 import ProfileAddressPage from "../customer-profile/address/ProfileAddressPage";
+import ProfileInboxPage from "../customer-profile/inbox/ProfileInboxPage";
 import MyReviewsPage from "../customer-profile/my-reviews/MyReviewsPage";
 import ProfileOrderPage from "../customer-profile/orders/ProfileOrderPage";
 import ProfileHomePage from "../customer-profile/profile-index/ProfileHomePage";
@@ -27,7 +28,8 @@ export {
     ProfileAddressPage,
     ProfileSecurityPage,
     ShopDetailsPage,
-    ShopPage
+    ShopPage,
+    ProfileInboxPage,
 
 
 }

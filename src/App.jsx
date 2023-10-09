@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.scss';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, ShopPage, WishlistPage } from './routes/routes';
+import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileInboxPage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, ShopPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
-import ProfileLayout from './customer-profile/shared/layout/ProfileLayout';
+import ProfileLayout, { ProfileLayoutInbox } from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
 import { GlobalContext } from './context/GlobalContext';
 import Redirect from './routes/redirect/Redirect';
@@ -31,7 +31,7 @@ const App = () => {
         <Route path='/profile' element={<Redirect location={'/profile/index'} />} />
         <Route path='/profile/index' element={<ProfileLayout><ProfileHomePage /></ProfileLayout>} />
         <Route path='/profile/orders' element={<ProfileLayout><ProfileOrderPage /></ProfileLayout>} />
-        <Route path='/profile/inbox' element={<ProfileLayout><ComingSoon /></ProfileLayout>} />
+        <Route path='/profile/inbox' element={<ProfileLayoutInbox><ProfileInboxPage /></ProfileLayoutInbox>} />
         <Route path='/profile/wishlist' element={<ProfileLayout><WishlistPage /></ProfileLayout>} />
         <Route path='/profile/refunds' element={<ProfileLayout><ProfileRefundsPage /></ProfileLayout>} />
         <Route path='/profile/reviews' element={<ProfileLayout><MyReviewsPage /></ProfileLayout>} />

@@ -33,3 +33,31 @@ const ProfileLayout = ({ children }) => {
 }
 
 export default ProfileLayout
+
+
+export const ProfileLayoutInbox = ({ children }) => {
+
+    useState(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    return (
+        <ProfileContext>
+            <LayoutDefault>
+                <DefaultWrapper>
+                    <div className="site-container flex flex-col mt-8 gap-4 profile-wrapper lg:flex-row ">
+                        <div className="profile-sidebar shrink-0 w-full lg:w-[65px] xl:w-[300px]  duration-300 overflow-clip rounded-md h-fit bg-white">
+                            <ProfileSidebar />
+                        </div>
+                        <div className="profile-body  rounded-md w-full h-fit  bg-white">
+                            <PageAnimation>
+                                {children}
+                            </PageAnimation>
+                        </div>
+                    </div>
+                </DefaultWrapper>
+            </LayoutDefault>
+        </ProfileContext>
+
+
+    )
+}
