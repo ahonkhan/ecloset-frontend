@@ -4,15 +4,23 @@ import './style.scss';
 import LogoGreen from '../../assets/LogoGreen';
 import { MdOutlineSupportAgent, MdSearch, MdShoppingCart } from 'react-icons/md';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineBell, AiOutlineHeart, AiOutlineMenu, AiOutlineNotification, AiOutlineUser } from 'react-icons/ai';
 import { ImCart } from 'react-icons/im';
 import { GetSharedContext } from '../../context/Context';
 import { GetGlobalContext } from '../../../../context/GlobalContext';
-// import 
+import { AnimatePresence, motion } from 'framer-motion';
+// import
 export const DesktopMenu = () => {
+    const profileMenu = [
+        { name: 'Profile', path: '/profile/index' },
+        { name: 'My Cart', path: '/cart' },
+        { name: 'WishList', path: '/profile/wishlist' },
+        { name: 'Login', path: '' },
+    ]
 
     const context = useContext(GetSharedContext);
-    const globalcontext = useContext(GetGlobalContext)
+    const globalcontext = useContext(GetGlobalContext);
+    const [profileDropdown, setProfileDropdown] = useState(false);
     return (
         <menu className={`flex ${style.HeaderPaddingDesktop} justify-between bg-GreenLight py-2 bg-opacity-30`}>
             <div className="flex items-center gap-4">
@@ -27,13 +35,29 @@ export const DesktopMenu = () => {
                 }
             </div>
             <div className="flex items-center gap-4">
-                <Link to={'/profile/index'}>
-                    <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
-                        <AiOutlineUser className='text-xl' />
-                    </button>
-                </Link>
+                <div onMouseEnter={() => setProfileDropdown(true)} onMouseLeave={() => setProfileDropdown(false)} className="relative">
+                    <Link to={'/profile/index'}>
+                        <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
+                            <AiOutlineUser className='text-xl' />
+                        </button>
+
+                    </Link>
+                    <ul className={`bg-white ${profileDropdown ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-5 opacity-0 pointer-events-none'} duration-300 min-h-[100px] shadow-2 w-[200px] z-[20] absolute top-10  rounded right-0`}>
+                        {
+                            profileMenu.map(item =>
+                                <li className='hover:bg-slate-100 border-b duration-200 '>
+                                    <Link className='py-2 px-4 block text-gray-700' to={item.path}>{item.name}</Link>
+                                </li>
+                            )
+                        }
+
+                    </ul>
+                    <div className={`bg-transparent h-[10px]  w-[200px] z-[20] absolute top-full  rounded right-0`}>
+                    </div>
+
+                </div>
                 <button className='w-9 h-9 flex items-center hover:shadow-xl duration-300 justify-center rounded-full bg-white text-GreenLight'>
-                    <AiOutlineHeart className='text-xl' />
+                    <AiOutlineBell className='text-xl' />
                 </button>
                 <div className="flex items-center gap-2">
 
