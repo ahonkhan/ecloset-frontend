@@ -8,6 +8,14 @@ import { CheckboxGreen, SignUpField } from '../input-field/InputField';
 const LoginSidebar = () => {
     const globalcontext = useContext(GetGlobalContext)
     const [rememberMe, setRememberMe] = useState(true);
+    const removeStatus = () => {
+        globalcontext.setLoginSidebarStatus(false);
+        document.body.classList.remove('overflow-hidden')
+    }
+
+
+
+
     return (
         <>
             <AnimatePresence>
@@ -42,7 +50,7 @@ const LoginSidebar = () => {
                                         <Link className='text-GrayMid'>Forgot password?</Link>
                                     </div>
                                     <button className='bg-Green text-white py-3 rounded-sm'>Continue</button>
-                                    <p className='text-center text-GrayMid'>Don't have an account? <Link className='text-Green'>Sign up</Link> </p>
+                                    <p className='text-center text-GrayMid'>Don't have an account? <Link onClick={() => removeStatus()} className='text-Green' to={'/signup'}>Sign up</Link> </p>
                                 </div>
                             </form>
 
@@ -52,7 +60,7 @@ const LoginSidebar = () => {
             </AnimatePresence>
             {
                 globalcontext.loginSidebarStatus && (
-                    <div onClick={() => { globalcontext.setLoginSidebarStatus(false); document.body.classList.remove('overflow-hidden') }} className="fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-50 z-[150]"></div>
+                    <div onClick={() => removeStatus()} className="fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-50 z-[150]"></div>
 
                 )
             }

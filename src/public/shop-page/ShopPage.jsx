@@ -9,6 +9,8 @@ const ShopPage = () => {
             <DefaultWrapper>
                 <ShopHeader />
                 <ShopList />
+                <div className="mt-8"></div>
+
             </DefaultWrapper>
         </PageAnimation>
     )

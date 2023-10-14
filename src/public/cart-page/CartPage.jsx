@@ -17,6 +17,8 @@ const CartPage = () => {
                     <Breadcrumb />
                     <CartProducts />
                     <CartTotal />
+                    <div className="mt-8"></div>
+
                 </DefaultWrapper>
             </PageAnimation>
         </>

@@ -36,6 +36,7 @@ export default {
         'Black': "#000000",
         'YellowDark': "#F7D334",
         'Red': '#FF2B2B',
+        'BlueShade': '#EAFEFF',
       },
       fontFamily: {
         'Roboto': ['Roboto'],

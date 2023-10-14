@@ -20,6 +20,8 @@ const ProductDetailsPage = () => {
                     <ProductInfoWrapper />
                     <ProductDetailsTab />
                     <SimilerProducts />
+                    <div className="mt-8"></div>
+
                 </DefaultWrapper>
             </PageAnimation>
         </>

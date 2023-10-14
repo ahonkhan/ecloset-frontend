@@ -13,8 +13,10 @@ import ProductDetailsPage from "../public/product-details/ProductDetailsPage";
 import SearchPage from "../public/search/SearchPage";
 import ShopDetailsPage from "../public/shop-details/ShopDetailsPage";
 import ShopPage from "../public/shop-page/ShopPage";
+import SignUpPage from "../public/signup/SignUpPage";
 
 export {
+    SignUpPage,
     HomePage,
     SearchPage,
     ProductDetailsPage,

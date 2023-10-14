@@ -16,15 +16,16 @@ const HomePage = () => {
 
     return (
 
-   
-            <PageAnimation>
-                <DefaultWrapper>
-                    <Hero />
-                    <Category />
-                    <TrendingProduct />
 
-                </DefaultWrapper>
-            </PageAnimation>
+        <PageAnimation>
+            <DefaultWrapper>
+                <Hero />
+                <Category />
+                <TrendingProduct />
+                <div className="mt-8"></div>
+
+            </DefaultWrapper>
+        </PageAnimation>
 
 
     )

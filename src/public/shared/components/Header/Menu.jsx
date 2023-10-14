@@ -42,7 +42,7 @@ export const DesktopMenu = () => {
                         </button>
 
                     </Link>
-                    <ul className={`bg-white ${profileDropdown ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-5 opacity-0 pointer-events-none'} duration-300 min-h-[100px] shadow-2 w-[200px] z-[20] absolute top-10  rounded right-0`}>
+                    <ul className={`bg-white ${profileDropdown ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-5 opacity-0 pointer-events-none'} duration-300 min-h-[100px] shadow-2 w-[200px] z-[50] absolute top-10  rounded right-0`}>
                         {
                             profileMenu.map(item =>
                                 <li className='hover:bg-slate-100 border-b duration-200 '>

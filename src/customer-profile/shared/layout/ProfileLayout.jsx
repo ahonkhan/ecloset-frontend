@@ -24,8 +24,10 @@ const ProfileLayout = ({ children }) => {
                             </PageAnimation>
                         </div>
                     </div>
+
                 </DefaultWrapper>
             </LayoutDefault>
+
         </ProfileContext>
 
 
@@ -54,8 +56,11 @@ export const ProfileLayoutInbox = ({ children }) => {
                             </PageAnimation>
                         </div>
                     </div>
+                    {/* <div className="mt-8"></div> */}
+
                 </DefaultWrapper>
             </LayoutDefault>
+
         </ProfileContext>
 
 

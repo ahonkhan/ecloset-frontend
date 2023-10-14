@@ -85,6 +85,7 @@ const ProfileHomePage = () => {
 
                 </div>
             </div>
+
         </PageAnimationProfile >
     )
 }

@@ -71,6 +71,8 @@ const ShopDetailsPage = () => {
                             }
                         </AnimatePresence>
                     </section>
+                    <div className="mt-8"></div>
+
                 </DefaultWrapper>
             </PageAnimation>
         </>

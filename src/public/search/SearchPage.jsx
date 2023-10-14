@@ -21,6 +21,7 @@ const SearchPage = () => {
                     <DefaultWrapper>
                         <SearchBreadCrumb />
                         <ProductWrapper />
+                        <div className="mt-8"></div>
                     </DefaultWrapper >
 
 

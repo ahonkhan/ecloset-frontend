@@ -24,6 +24,8 @@ const CheckoutPage = () => {
                         <CheckoutRight />
                     </div>
                 </div>
+                <div className="mt-8"></div>
+
             </DefaultWrapper>
         </PageAnimation>
     )
