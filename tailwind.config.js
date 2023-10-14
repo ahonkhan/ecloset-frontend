@@ -31,6 +31,7 @@ export default {
         'White': "#FFFFFF",
         'LightGray': "#F6EEE7",
         'Gray': "#F0F0F0",
+        'GrayMid': "#727272",
         'DarkGray': "#6B6B6B",
         'Black': "#000000",
         'YellowDark': "#F7D334",
@@ -43,6 +44,7 @@ export default {
         'Poppins': ['Poppins'],
         'Ubuntu': ['Ubuntu'],
         'Exo': ['Exo'],
+        'Inter': ['Inter'],
 
       }
     },

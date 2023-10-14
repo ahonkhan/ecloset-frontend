@@ -15,7 +15,7 @@ export const DesktopMenu = () => {
         { name: 'Profile', path: '/profile/index' },
         { name: 'My Cart', path: '/cart' },
         { name: 'WishList', path: '/profile/wishlist' },
-        { name: 'Login', path: '' },
+        // { name: 'Login', path: '' },
     ]
 
     const context = useContext(GetSharedContext);
@@ -50,6 +50,9 @@ export const DesktopMenu = () => {
                                 </li>
                             )
                         }
+                        <li className='hover:bg-slate-100 border-b duration-200 '>
+                            <button onClick={() => { globalcontext.setLoginSidebarStatus(true); document.body.classList.add('overflow-hidden') }} className='py-2 px-4 block text-gray-700 w-full text-start'>Login</button>
+                        </li>
 
                     </ul>
                     <div className={`bg-transparent h-[10px]  w-[200px] z-[20] absolute top-full  rounded right-0`}>

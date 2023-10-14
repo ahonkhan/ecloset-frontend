@@ -12,6 +12,7 @@ import LoadingPage from './public/shared/components/page/LoadingPage';
 import { PageAnimation } from './public/shared/components/page/PageAnimation';
 import PageNotFound from './public/shared/components/page/PageNotFound';
 import CartSidebar from './public/shared/components/Sidebar/CartSidebar';
+import LoginSidebar from './public/shared/components/Sidebar/LoginSidebar';
 const App = () => {
   return (
 
@@ -19,6 +20,7 @@ const App = () => {
     <>
       <ButtonBackToTop />
       <CartSidebar />
+      <LoginSidebar />
       <Routes>
         <Route path='/' element={<LayoutDefault><HomePage /></LayoutDefault>} />
         <Route path='/search' element={<LayoutDefault><SearchPage /></LayoutDefault>} />
