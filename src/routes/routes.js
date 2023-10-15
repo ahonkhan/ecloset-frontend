@@ -9,6 +9,7 @@ import WishlistPage from "../customer-profile/wishlist/WishlistPage";
 import CartPage from "../public/cart-page/CartPage";
 import CheckoutPage from "../public/checkout/CheckoutPage";
 import HomePage from "../public/home/HomePage";
+import LoginPage from "../public/login-page/LoginPage";
 import ProductDetailsPage from "../public/product-details/ProductDetailsPage";
 import SearchPage from "../public/search/SearchPage";
 import ShopDetailsPage from "../public/shop-details/ShopDetailsPage";
@@ -17,6 +18,7 @@ import SignUpPage from "../public/signup/SignUpPage";
 
 export {
     SignUpPage,
+    LoginPage,
     HomePage,
     SearchPage,
     ProductDetailsPage,

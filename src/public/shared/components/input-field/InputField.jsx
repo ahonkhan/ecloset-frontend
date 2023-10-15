@@ -89,6 +89,27 @@ export const SignUpField = ({ type, placeholder }) => {
     )
 }
 
+export const SignUpSelect = ({ placeholder, data }) => {
+    const [status, setStatus] = useState(false);
+    const [selectedData, setSeletedData] = useState(placeholder)
+    return (
+        <div className="input-item relative">
+            <button onClick={() => setStatus(!status)} type='button' className={`bg-white border flex justify-between items-center text-start py-3 ${status ? 'rounded-t' : 'rounded'} outline-none w-full px-4 font-WorkSans text-gray-400`}><span>{selectedData}</span> <span><MdChevronRight className={`duration-300 ${status ? '-rotate-90' : 'rotate-90'}`} /></span> </button>
+            <AnimatePresence>
+                {status && (
+                    <motion.ul style={{ 'scrollbarWidth': 'thin' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="bg-gray-50 z-[10] shadow-1 absolute w-full rounded-b overflow-y-auto max-h-[200px]">
+                        {
+                            data?.map(item =>
+                                <li onClick={() => { setSeletedData(item); setStatus(false) }} className="hover:bg-gray-100 duration-200 text-start cursor-pointer border-t py-3 outline-none w-full px-4 font-WorkSans text-gray-400">{item}</li>
+                            )
+
+                        }
+                    </motion.ul>
+                )}
+            </AnimatePresence>
+        </div>
+    )
+}
 export const CheckboxGreen = ({ getStatus, setStatus }) => {
     return (
         <button onClick={() => setStatus(!getStatus)} type="button" className={` w-[18px] h-[18px] ${getStatus ? 'bg-Green  border-transparent' : 'border'} border duration-150 text-[10px] flex items-center justify-center text-white rounded-sm font-medium`}>

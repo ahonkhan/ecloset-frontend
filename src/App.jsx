@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.scss';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
-import { CartPage, CheckoutPage, HomePage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileInboxPage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, ShopPage, SignUpPage, WishlistPage } from './routes/routes';
+import { CartPage, CheckoutPage, HomePage, LoginPage, MyReviewsPage, ProductDetailsPage, ProfileAddressPage, ProfileHomePage, ProfileInboxPage, ProfileOrderPage, ProfileRefundsPage, ProfileSecurityPage, SearchPage, ShopDetailsPage, ShopPage, SignUpPage, WishlistPage } from './routes/routes';
 import LayoutDefault from './public/shared/layout/LayoutDefault';
 import ProfileLayout, { ProfileLayoutInbox } from './customer-profile/shared/layout/ProfileLayout';
 import ComingSoon from './customer-profile/shared/components/wrapper/ComingSoon';
@@ -30,6 +30,7 @@ const App = () => {
         <Route path='/cart' element={<LayoutDefault><CartPage /></LayoutDefault>} />
         <Route path='/checkout' element={<LayoutDefault><CheckoutPage /></LayoutDefault>} />
         <Route path='/signup' element={<LayoutDefault><SignUpPage /></LayoutDefault>} />
+        <Route path='/login' element={<LayoutDefault><LoginPage /></LayoutDefault>} />
         {/* profile */}
         <Route path='/profile' element={<Redirect location={'/profile/index'} />} />
         <Route path='/profile/index' element={<ProfileLayout><ProfileHomePage /></ProfileLayout>} />
