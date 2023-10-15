@@ -19,13 +19,14 @@ const ProfileSidebar = () => {
         { 'name': 'Reviews', 'icon': <AiOutlineComment />, 'path': '/profile/reviews' },
         { 'name': 'Address', 'icon': <LiaAddressBook />, 'path': '/profile/address' },
         { 'name': 'Security', 'icon': <MdSecurity />, 'path': '/profile/security' },
-        { 'name': 'Settings', 'icon': <AiOutlineSetting />, 'path': '/profile/settings' },
+        // { 'name': 'Settings', 'icon': <AiOutlineSetting />, 'path': '/profile/settings' },
     ]
     const context = useContext(GetProfileContext)
     const Setdefault = () => {
         context.setMenuStatus(false)
         // window.scrollTo(0, 0)
     }
+    
     return (
         <aside className='bg-white rounded py-2'>
             <button onClick={() => context.setMenuStatus(!context.menuStatus)} className="flex w-full sm:hidden text-xl px-4 justify-between">
